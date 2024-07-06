@@ -42,6 +42,7 @@
     {"id":{"name":"obj_pu","path":"objects/obj_pu/obj_pu.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"scr_items","path":"scripts/scr_items/scr_items.yy",},},
+    {"id":{"name":"scr_potions","path":"scripts/scr_potions/scr_potions.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
     {"id":{"name":"spr_move_test","path":"sprites/spr_move_test/spr_move_test.yy",},},
     {"id":{"name":"spr_pickup","path":"sprites/spr_pickup/spr_pickup.yy",},},

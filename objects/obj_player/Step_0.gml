@@ -5,10 +5,10 @@ depth = -y;
 
 #region movement
 
-var _in_up = keyboard_check(ord("W"));
-var _in_down = keyboard_check(ord("S"));
-var _in_left = keyboard_check(ord("A"));
-var _in_right = keyboard_check(ord("D"));
+var _in_up = keyboard_check(ord("W")) || gamepad_button_check(0, gp_padu);
+var _in_down = keyboard_check(ord("S"))|| gamepad_button_check(0, gp_padd);
+var _in_left = keyboard_check(ord("A"))|| gamepad_button_check(0, gp_padl);
+var _in_right = keyboard_check(ord("D"))|| gamepad_button_check(0, gp_padr);
 
 var _mv_x = 0;
 var _mv_y = 0;
