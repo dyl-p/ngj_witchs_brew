@@ -46,6 +46,7 @@
     {"id":{"name":"spr_move_test","path":"sprites/spr_move_test/spr_move_test.yy",},},
     {"id":{"name":"spr_pickup","path":"sprites/spr_pickup/spr_pickup.yy",},},
     {"id":{"name":"spr_player_down","path":"sprites/spr_player_down/spr_player_down.yy",},},
+    {"id":{"name":"spr_player_right","path":"sprites/spr_player_right/spr_player_right.yy",},},
     {"id":{"name":"spr_player_up","path":"sprites/spr_player_up/spr_player_up.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_pu","path":"sprites/spr_pu/spr_pu.yy",},},

@@ -47,32 +47,45 @@ if ( _mv_x != 0 && _mv_y != 0 ) {
 if place_meeting(x+ _mv_x, y + _mv_y, obj_collision){
 	
 	//make the character's x, y integer values
+	if sign(_mv_x) > 0 {
+		x = ceil(x);
+		_mv_x = floor(_mv_x);
+	} else {
+		x = floor(x);
+		_mv_x = ceil(_mv_x);		
+	}
 	
+	if sign(_mv_y) > 0 {
+		y = ceil(y);
+		_mv_y = floor(_mv_y);
+	} else {
+		y = floor(y);
+		_mv_y = ceil(_mv_y);		
+	}
+
+	var _x_sign = sign(_mv_x);
+	var _y_sign = sign(_mv_y);
 	
 	while place_meeting(x + _mv_x, y, obj_collision){
-		if sign(_mv_x) > 0 {
-			x = floor(x);
-			_mv_x = ceil(_mv_x);
+		if _x_sign > 0 {
+			_mv_x -= 1;	
 		} else {
-			x = ceil(x);
-			_mv_x = floor(_mv_x);		
+			_mv_x += 1;	
 		}
 		
-		_mv_x = sign(_mv_x) * (abs(_mv_x) - 1);
+		if _mv_x == 0 { break; }
 	}
 	
 	while place_meeting(x, y + _mv_y, obj_collision){
-		if sign(_mv_y) > 0 {
-			y = floor(y);
-			_mv_y = ceil(_mv_y);
+		if _y_sign > 0 {
+			_mv_y -= 1;	
 		} else {
-			y = ceil(y);
-			_mv_y = floor(_mv_y);		
+			_mv_y += 1;	
 		}
 		
-		_mv_y = sign(_mv_y) * (abs(_mv_y) - 1);
+		if _mv_y == 0 { break; }
 	}
-} 
+}
 
 x += _mv_x;
 y += _mv_y;
@@ -90,15 +103,13 @@ if _mv_x == 0 && _mv_y == 0 {
 switch (dir) {
 	case "left":
 		sprite_index = spr_player;
-		image_xscale = 1;
 		pickup.x = x - 
 			(sprite_width / 2) - 
 			(pickup.sprite_width / 2);
 		pickup.y = y;
 		break;
 	case "right":
-		sprite_index = spr_player;
-		image_xscale = -1;
+		sprite_index = spr_player_right;
 		pickup.x = x + 
 			abs((sprite_width / 2)) + 
 			(pickup.sprite_width / 2);	
@@ -106,13 +117,12 @@ switch (dir) {
 		break;
 	case "up":
 		sprite_index = spr_player_up;
-		image_xscale = 1;
+
 		pickup.x = x;
 		pickup.y = y - sprite_height;
 		break;
 	case "down":
 		sprite_index = spr_player_down;
-		image_xscale = 1;
 		pickup.x = x;
 		pickup.y = y + pickup.sprite_height;
 		break;
