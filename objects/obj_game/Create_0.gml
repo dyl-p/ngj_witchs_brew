@@ -8,12 +8,15 @@
 //set randomness
 randomize();
 
+money = 0;
+
 //list ingredients held
-ingredients = [
-	["lightning", 0],
-	["polaroid", 0],
-	["heartstone", 0]
-];
+ing_found = {
+	lightning: 1,
+	cat_black: 0,
+	flower: 0,
+	grass: 0
+};
 
 //list orders taken
 orders = ds_list_create();
@@ -23,7 +26,7 @@ scr_add_potion(orders);
 scr_add_potion(orders);
 
 show_debug_message(orders[|0].name);
-show_debug_message(orders[|1].name);
+
 
 //create buttons for main room
 
