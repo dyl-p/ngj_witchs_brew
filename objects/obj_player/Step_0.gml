@@ -14,9 +14,9 @@ var _mv_y = 0;
 if _in_left || _in_right {
 	_mv_x = _in_right - _in_left;
 	if _mv_x < 0 {
-		dir = "right";
+		dir = "left";
 	} else if _mv_x > 0 {
-		dir = "left";	
+		dir = "right";	
 	}
 }
 if _in_up || _in_down {
@@ -88,7 +88,7 @@ switch (dir) {
 		break;
 	case "right":
 		sprite_index = spr_player;
-		image_ = -1;
+		image_xscale = -1;
 		break;
 	case "up":
 		sprite_index = spr_player_up;
