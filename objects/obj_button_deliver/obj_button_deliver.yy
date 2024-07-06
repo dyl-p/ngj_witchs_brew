@@ -1,15 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player_hands",
-  "eventList":[],
+  "%Name":"obj_button_deliver",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_player_hands",
+  "name":"obj_button_deliver",
   "overriddenProperties":[],
   "parent":{
-    "name":"player",
-    "path":"folders/Objects/player.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_button",
+    "path":"objects/obj_button/obj_button.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,9 +33,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_pickup",
-    "path":"sprites/spr_pickup/spr_pickup.yy",
+    "name":"spr_button",
+    "path":"sprites/spr_button/spr_button.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
