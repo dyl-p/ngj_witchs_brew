@@ -45,6 +45,8 @@
     {"id":{"name":"spr_player_down","path":"sprites/spr_player_down/spr_player_down.yy",},},
     {"id":{"name":"spr_player_up","path":"sprites/spr_player_up/spr_player_up.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"Tiles","path":"sprites/Tiles/Tiles.yy",},},
+    {"id":{"name":"Tileset","path":"tilesets/Tileset/Tileset.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
