@@ -66,7 +66,7 @@
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_stump","path":"sprites/spr_stump/spr_stump.yy",},},
     {"id":{"name":"spr_tree_owl","path":"sprites/spr_tree_owl/spr_tree_owl.yy",},},
-    {"id":{"name":"spt_treetop","path":"sprites/spt_treetop/spt_treetop.yy",},},
+    {"id":{"name":"spr_treetop","path":"sprites/spr_treetop/spr_treetop.yy",},},
     {"id":{"name":"Tiles","path":"sprites/Tiles/Tiles.yy",},},
     {"id":{"name":"Tileset","path":"tilesets/Tileset/Tileset.yy",},},
   ],
