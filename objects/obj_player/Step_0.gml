@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+depth = -y;
+
 #region movement
 
 var _in_up = keyboard_check(ord("W"));
@@ -78,6 +80,12 @@ y += _mv_y;
 #endregion
 
 #region set sprite
+
+if _mv_x == 0 && _mv_y == 0 {
+	image_speed = 0;	
+} else {
+	image_speed = 1;
+}	
 
 switch (dir) {
 	case "left":

@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_text(x, y - 60, dir);
-draw_text(x, y - 90, pickup.x);
-draw_text(x, y - 120, x);
-draw_text(x, y - 150, sprite_width);
+if instance_exists(obj_game){
+	draw_text(x, y - 120, obj_game.ingredients[0][1])	
+}
+
 draw_self();
