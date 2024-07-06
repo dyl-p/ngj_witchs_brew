@@ -75,8 +75,6 @@ if place_meeting(x+ _mv_x, y + _mv_y, obj_collision){
 x += _mv_x;
 y += _mv_y;
 
-//move pickup object
-
 #endregion
 
 #region set sprite
@@ -85,18 +83,30 @@ switch (dir) {
 	case "left":
 		sprite_index = spr_player;
 		image_xscale = 1;
+		pickup.x = x - 
+			(sprite_width / 2) - 
+			(pickup.sprite_width / 2);
+		pickup.y = y;
 		break;
 	case "right":
 		sprite_index = spr_player;
 		image_xscale = -1;
+		pickup.x = x + 
+			abs((sprite_width / 2)) + 
+			(pickup.sprite_width / 2);	
+		pickup.y = y;
 		break;
 	case "up":
 		sprite_index = spr_player_up;
 		image_xscale = 1;
+		pickup.x = x;
+		pickup.y = y - sprite_height;
 		break;
 	case "down":
 		sprite_index = spr_player_down;
 		image_xscale = 1;
+		pickup.x = x;
+		pickup.y = y + pickup.sprite_height;
 		break;
 }
 

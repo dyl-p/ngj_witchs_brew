@@ -1,15 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pickup",
-  "eventList":[],
+  "%Name":"obj_pu",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player_hands","path":"objects/obj_player_hands/obj_player_hands.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_pickup",
+  "name":"obj_pu",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_collision",
+    "path":"objects/obj_collision/obj_collision.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_pickup",
-    "path":"sprites/spr_pickup/spr_pickup.yy",
+    "name":"spr_pu",
+    "path":"sprites/spr_pu/spr_pu.yy",
   },
   "spriteMaskId":null,
   "visible":true,
