@@ -38,6 +38,7 @@
   "name":"nelson_game_jam",
   "resources":[
     {"id":{"name":"obj_button_deliver","path":"objects/obj_button_deliver/obj_button_deliver.yy",},},
+    {"id":{"name":"obj_button_orders","path":"objects/obj_button_orders/obj_button_orders.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},},
@@ -52,6 +53,7 @@
     {"id":{"name":"scr_potions","path":"scripts/scr_potions/scr_potions.yy",},},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
+    {"id":{"name":"spr_crystalphone","path":"sprites/spr_crystalphone/spr_crystalphone.yy",},},
     {"id":{"name":"spr_move_test","path":"sprites/spr_move_test/spr_move_test.yy",},},
     {"id":{"name":"spr_pickup","path":"sprites/spr_pickup/spr_pickup.yy",},},
     {"id":{"name":"spr_player_down","path":"sprites/spr_player_down/spr_player_down.yy",},},

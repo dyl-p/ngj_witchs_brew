@@ -16,10 +16,12 @@ function cat (): potion () constructor {
 	name="Talk to Cats"
 	ingredients = ["lightning", "grass"];
 	value = 105;
+	//spr = spr_cat;
 }
 
 function owl (): potion () constructor {
 	name="Night Owl"
 	ingredients = ["lightning", "grass"];
-	value = 115;	
+	value = 115;
+	//spr = spr_owl;
 }

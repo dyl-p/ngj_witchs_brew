@@ -13,3 +13,15 @@ function item_add(_name){
 		}
 	}
 }
+
+function item_sprite(_name){
+	
+	switch (_name) {
+	    case "lightning":
+	        return spr_item_lightning;
+	    default:
+	        // code here
+	        break;
+	}
+	
+}
