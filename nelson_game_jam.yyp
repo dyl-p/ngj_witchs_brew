@@ -46,6 +46,7 @@
     {"id":{"name":"obj_player_hands","path":"objects/obj_player_hands/obj_player_hands.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_pu","path":"objects/obj_pu/obj_pu.yy",},},
+    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"rm_orders","path":"rooms/rm_orders/rm_orders.yy",},},
     {"id":{"name":"scr_items","path":"scripts/scr_items/scr_items.yy",},},
     {"id":{"name":"scr_potions","path":"scripts/scr_potions/scr_potions.yy",},},
@@ -63,6 +64,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_orders","path":"rooms/rm_orders/rm_orders.yy",},},
   ],
   "templateType":"game",
