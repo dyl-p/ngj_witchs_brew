@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_collision",
+  "%Name":"obj_pickup",
   "eventList":[],
   "managed":true,
-  "name":"obj_collision",
+  "name":"obj_pickup",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_collision",
-    "path":"sprites/spr_collision/spr_collision.yy",
+    "name":"spr_pickup",
+    "path":"sprites/spr_pickup/spr_pickup.yy",
   },
   "spriteMaskId":null,
   "visible":true,
