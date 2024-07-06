@@ -15,7 +15,7 @@ ing_found = {
 	lightning: 1,
 	cat_black: 0,
 	flower: 0,
-	grass: 0
+	grass: 1
 };
 
 //list orders taken

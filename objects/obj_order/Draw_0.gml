@@ -19,5 +19,10 @@ if !delivery_check {
 }
 
 if _ready == array_length(ingredients) {
-	delivery_ready = true;	
+	delivery_ready = true;
+	var _del = instance_create_layer(x, y + 120, "Instances", obj_button_deliver);
+	_del.text = "Deliver Potion";
+	_del.list_pos = list_pos;
+	_del.order = id;
+	_del.value = value;
 }

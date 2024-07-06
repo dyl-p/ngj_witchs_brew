@@ -8,6 +8,6 @@ if room_get_name(room) == "rm_orders" {
 		_inst.name = orders[|_i].name;
 		_inst.ingredients = orders[|_i].ingredients;
 		_inst.value = orders[|_i].value;
-		
+		_inst.list_pos = _i;
 	}
 }
