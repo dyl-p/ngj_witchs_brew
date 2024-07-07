@@ -88,6 +88,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"scr_items","path":"scripts/scr_items/scr_items.yy",},},
     {"id":{"name":"scr_potions","path":"scripts/scr_potions/scr_potions.yy",},},
+    {"id":{"name":"snd_pickup","path":"sounds/snd_pickup/snd_pickup.yy",},},
     {"id":{"name":"snd_potiondash_better_music","path":"sounds/snd_potiondash_better_music/snd_potiondash_better_music.yy",},},
     {"id":{"name":"menuphone","path":"sprites/menuphone/menuphone.yy",},},
     {"id":{"name":"rose_bush","path":"sprites/rose_bush/rose_bush.yy",},},
