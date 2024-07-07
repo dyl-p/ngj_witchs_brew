@@ -1,6 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
+function player_has_item(_name){
+	return obj_game.ing_found[$ _name] == 1;	
+}
+
 function item_add(_name){
 	obj_game.ing_found[$ _name] = 1;
 }
