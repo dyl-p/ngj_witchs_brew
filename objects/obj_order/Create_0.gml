@@ -6,6 +6,7 @@ nm = "";
 ingredients=[];
 value = 0;
 list_pos = -1;
+list_val = -1;
 
 delivery_check = false;
 delivery_check_2 = false;

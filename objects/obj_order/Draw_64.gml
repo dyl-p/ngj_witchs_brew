@@ -11,7 +11,13 @@ draw_set_font(_save_font);
 
 //draw potion ingredients
 for (var _i = 0; _i < array_length(ingredients); _i++ ){
-	draw_sprite(item_sprite(ingredients[_i]), 0, x + 131 + (167 * _i), y + 30);
+	var _alpha = 1;
+	
+	if obj_game.ing_found[$ ingredients[_i]] = 0 {
+		_alpha = 0.5;	
+	}
+	
+	draw_sprite_ext(item_sprite(ingredients[_i]), 0, x + 131 + (167 * _i), y + 30, 1, 1, 0, c_white,_alpha);
 }
 
 var _ready = 0;
@@ -27,13 +33,7 @@ if !delivery_check {
 if !delivery_check_2 {
 	if _ready == array_length(ingredients) {
 		delivery_ready = true;
-		//var _del = instance_create_layer(x + 400, y, "Instances", obj_button_deliver);
-		//_del.text = "Deliver Potion";
-		//_del.list_pos = list_pos;
-		//_del.order = id;
-		//_del.val = value;
-		
-		
+	
 	}
 	delivery_check_2 = true;
 }

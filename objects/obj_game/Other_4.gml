@@ -9,5 +9,6 @@ if room_get_name(room) == "rm_orders" {
 		_inst.ingredients = orders[|_i].ingredients;
 		_inst.value = orders[|_i].value;
 		_inst.list_pos = _i;
+		_inst.list_val = ds_list_find_value(orders, _i);
 	}
 }

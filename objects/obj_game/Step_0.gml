@@ -24,5 +24,3 @@ if time <= 0 {
 	}
 	time = rent_due;
 }
-
-show_debug_message(ing_found);

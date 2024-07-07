@@ -8,7 +8,7 @@ draw_set_valign(fa_center);
 
 
 if hover {
-	var _lerp = 1.2 * x_scale;
+	var _lerp = 1.1 * x_scale;
 	var _lerp_amt = 0.1;
 
 	image_xscale = lerp(image_xscale, _lerp, _lerp_amt);

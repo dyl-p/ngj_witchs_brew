@@ -14,7 +14,7 @@ function item_sprite(_name){
 		case "owl_feather":
 			return spr_owl_feather;
 	    case "cattail":
-	        return spr_cattails;
+	        return spr_cattails_menu;
 		case "glass_milk":
 			return spr_milk;
 	    case "hairball":
