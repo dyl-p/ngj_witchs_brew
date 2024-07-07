@@ -73,6 +73,7 @@
     {"id":{"name":"spr_cattails","path":"sprites/spr_cattails/spr_cattails.yy",},},
     {"id":{"name":"spr_chicken_brown","path":"sprites/spr_chicken_brown/spr_chicken_brown.yy",},},
     {"id":{"name":"spr_chickenblack","path":"sprites/spr_chickenblack/spr_chickenblack.yy",},},
+    {"id":{"name":"spr_chickencoop","path":"sprites/spr_chickencoop/spr_chickencoop.yy",},},
     {"id":{"name":"spr_chickenwhite","path":"sprites/spr_chickenwhite/spr_chickenwhite.yy",},},
     {"id":{"name":"spr_coffee","path":"sprites/spr_coffee/spr_coffee.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
