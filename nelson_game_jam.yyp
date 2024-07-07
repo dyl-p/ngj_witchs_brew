@@ -37,6 +37,7 @@
   },
   "name":"nelson_game_jam",
   "resources":[
+    {"id":{"name":"fnt_button","path":"fonts/fnt_button/fnt_button.yy",},},
     {"id":{"name":"obj_button_deliver","path":"objects/obj_button_deliver/obj_button_deliver.yy",},},
     {"id":{"name":"obj_button_menu","path":"objects/obj_button_menu/obj_button_menu.yy",},},
     {"id":{"name":"obj_button_orders","path":"objects/obj_button_orders/obj_button_orders.yy",},},
@@ -85,6 +86,7 @@
     {"id":{"name":"spr_house_yellow","path":"sprites/spr_house_yellow/spr_house_yellow.yy",},},
     {"id":{"name":"spr_milk","path":"sprites/spr_milk/spr_milk.yy",},},
     {"id":{"name":"spr_move_test","path":"sprites/spr_move_test/spr_move_test.yy",},},
+    {"id":{"name":"spr_nightowlpotion","path":"sprites/spr_nightowlpotion/spr_nightowlpotion.yy",},},
     {"id":{"name":"spr_owl_feather","path":"sprites/spr_owl_feather/spr_owl_feather.yy",},},
     {"id":{"name":"spr_pickup","path":"sprites/spr_pickup/spr_pickup.yy",},},
     {"id":{"name":"spr_player_down","path":"sprites/spr_player_down/spr_player_down.yy",},},
@@ -93,6 +95,7 @@
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_RV","path":"sprites/spr_RV/spr_RV.yy",},},
     {"id":{"name":"spr_school_bus_conversion","path":"sprites/spr_school_bus_conversion/spr_school_bus_conversion.yy",},},
+    {"id":{"name":"spr_speaktocatspotion","path":"sprites/spr_speaktocatspotion/spr_speaktocatspotion.yy",},},
     {"id":{"name":"spr_stump","path":"sprites/spr_stump/spr_stump.yy",},},
     {"id":{"name":"spr_timer_bg","path":"sprites/spr_timer_bg/spr_timer_bg.yy",},},
     {"id":{"name":"spr_timer_fg","path":"sprites/spr_timer_fg/spr_timer_fg.yy",},},

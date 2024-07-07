@@ -10,9 +10,15 @@ function item_sprite(_name){
 	
 	switch (_name) {
 	    case "half_coffee":
-	        return spr_half_coffee;
+	        return spr_coffee;
 		case "owl_feather":
 			return spr_owl_feather;
+	    case "cattail":
+	        return spr_cattails;
+		case "glass_milk":
+			return spr_milk;
+	    case "hairball":
+	        return spr_hair_ball;
 	    default:
 	        // code here
 	        break;
