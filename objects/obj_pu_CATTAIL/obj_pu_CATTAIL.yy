@@ -8,8 +8,8 @@
   "name":"obj_pu_cattail",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"interactibles",
+    "path":"folders/Objects/interactibles.yy",
   },
   "parentObjectId":{
     "name":"obj_pu",

@@ -6,8 +6,8 @@
   "name":"obj_button_menu_potiondash",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ui",
+    "path":"folders/Objects/ui.yy",
   },
   "parentObjectId":{
     "name":"obj_button_menu",

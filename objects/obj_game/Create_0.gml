@@ -20,7 +20,7 @@ money = 0;
 //30 days @ 15 seconds per day @ 60 frames per second
 rent_due = 30 * 24 * 60;
 time = rent_due;
-rent_amount = 350;
+rent_amount = 666;
 
 //list ingredients held
 ing_found = {
@@ -28,18 +28,23 @@ ing_found = {
 	owl_feather: 0,
 	cattail: 0,
 	hairball: 0,
-	glass_milk: 0
+	glass_milk: 0,
+	ash: 0,
+	bacon: 0,
+	bandaid: 0,
+	eyeofnewt: 0,
+	pictureoftoad: 0,
+	syringe: 0,
+	waterbottle: 0,
+	wine: 0
 };
 
 //list orders taken
 orders = ds_list_create();
 
-//testing add two potions to order
-//scr_add_potion(orders);
-//scr_add_potion(orders);
-
-ds_list_add(orders, new cat()  );
-ds_list_add(orders, new owl()  );
+//send first two orders
+send_next_order();
+send_next_order();
 
 on_order_delivered = function(_order){
 	money += _order.value;
@@ -50,8 +55,11 @@ on_order_delivered = function(_order){
 	    item_remove(array_get(_order.ingredients, i));
 	}
 	
+	// make sure we don't send the same potion again right away
+	global.last_order_name = _order.nm;
 	// remove completed order from list
 	ds_list_delete(orders , ds_list_find_index(orders, _order.list_val));
+	send_next_order()
 	
 	if money >= rent_amount {
 		// woohoo you made rent!

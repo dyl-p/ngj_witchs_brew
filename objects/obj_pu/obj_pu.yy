@@ -9,8 +9,8 @@
   "name":"obj_pu",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"interactibles",
+    "path":"folders/Objects/interactibles.yy",
   },
   "parentObjectId":null,
   "persistent":false,

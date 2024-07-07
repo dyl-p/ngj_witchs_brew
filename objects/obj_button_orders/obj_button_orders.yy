@@ -12,8 +12,8 @@
   "name":"obj_button_orders",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ui",
+    "path":"folders/Objects/ui.yy",
   },
   "parentObjectId":{
     "name":"obj_button",

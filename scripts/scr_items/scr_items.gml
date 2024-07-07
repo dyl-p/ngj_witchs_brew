@@ -27,6 +27,22 @@ function item_sprite(_name){
 			return spr_milk;
 	    case "hairball":
 	        return spr_hair_ball;
+		case "ash":
+			return spr_icon_ash;
+		case "bacon":
+			return spr_icon_bacon;
+		case "bandaid":
+			return spr_icon_bandaid;
+		case "eyeofnewt":
+			return spr_icon_eyeofnewt;
+		case "pictureoftoad":
+			return spr_icon_pictureoftoad;
+		case "syringe":
+			return spr_icon_synringe;
+		case "waterbottle":
+			return spr_icon_waterbottle;
+		case "wine":
+			return spr_icon_wine_glass;
 	    default:
 	        // code here
 	        break;
@@ -47,6 +63,22 @@ function item_desc(_name){
 			return "a partially drunk glass of milk";
 	    case "hairball":
 	        return "a coughed up hairball";
+		case "ash":
+			return "a pile of cigarette ash";
+		case "bacon":
+			return "delicious bacon :)";
+		case "bandaid":
+			return "a gross used bandaid";
+		case "eyeofnewt":
+			return "an eye of newt";
+		case "pictureoftoad":
+			return "a picture of a toad";
+		case "syringe":
+			return "a syringe, be careful!";
+		case "waterbottle":
+			return "a bottle of fizzy water";
+		case "wine":
+			return "someone's abandoned wine glass";
 	    default:
 	        // code here
 	        break;
