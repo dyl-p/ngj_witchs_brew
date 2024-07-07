@@ -44,10 +44,14 @@ ds_list_add(orders, new owl()  );
 on_order_delivered = function(_order){
 	money += _order.value;
 	
+	// remove order ingredients from inventory
 	for (var i = 0; i < array_length(_order.ingredients); i += 1)
 	{
 	    item_remove(array_get(_order.ingredients, i));
 	}
+	
+	// remove completed order from list
+	ds_list_delete(orders , ds_list_find_index(orders, _order.list_val));
 	
 	if money >= rent_amount {
 		// woohoo you made rent!

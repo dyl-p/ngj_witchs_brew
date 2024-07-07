@@ -8,13 +8,11 @@ if !disable {
 
 	for (var _i = 0; _i < instance_number(obj_order); _i++;)
 	{
-	    var _inst =  instance_find(obj_order, _i);
+	    var _inst = instance_find(obj_order, _i);
 	
 		if _inst.delivery_ready {
-			ds_list_delete(obj_game.orders , ds_list_find_index(obj_game.orders, _inst.list_val));
 			obj_game.on_order_delivered(_inst);
 		}
-	
 	}
 
 	// Inherit the parent event
