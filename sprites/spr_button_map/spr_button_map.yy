@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"nelson_game_jam",
-    "path":"nelson_game_jam.yyp",
+    "name":"ui",
+    "path":"folders/Sprites/ui.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
