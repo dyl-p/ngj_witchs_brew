@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pu",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player_hands","path":"objects/obj_player_hands/obj_player_hands.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_pu_FOUNTAIN",
+  "eventList":[],
   "managed":true,
-  "name":"obj_pu",
+  "name":"obj_pu_FOUNTAIN",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_pu",
+    "path":"objects/obj_pu/obj_pu.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_fountain",
+    "path":"sprites/spr_fountain/spr_fountain.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
