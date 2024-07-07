@@ -23,7 +23,7 @@
   ],
   "name":"spr_pickup",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"nelson_game_jam",
     "path":"nelson_game_jam.yyp",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":22,
-    "yorigin":90,
+    "yorigin":76,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
