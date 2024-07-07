@@ -9,9 +9,10 @@ user events:
 */
 
 
-//if instance_number(obj_game) > 1 {
-//	instance_destroy();	
-//}
+if instance_number(obj_game) > 1 {
+	instance_destroy();	
+}
+
 //set randomness
 randomize();
 
@@ -69,3 +70,5 @@ on_order_delivered = function(_order){
 }
 
 room_persistent = true;
+
+audio_play_sound(snd_potiondash_better_music,1,true);
