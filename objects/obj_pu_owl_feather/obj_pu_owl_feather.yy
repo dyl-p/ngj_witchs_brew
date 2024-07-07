@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pu_CATTAIL",
+  "%Name":"obj_pu_owl_feather",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pu_CATTAIL",
+  "name":"obj_pu_owl_feather",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cattails",
-    "path":"sprites/spr_cattails/spr_cattails.yy",
+    "name":"spr_owl_feather",
+    "path":"sprites/spr_owl_feather/spr_owl_feather.yy",
   },
   "spriteMaskId":null,
   "visible":true,
