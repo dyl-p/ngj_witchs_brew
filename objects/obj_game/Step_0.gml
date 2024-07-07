@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if room == rm_lose || room == rm_win {
+	//show_debug_message("obj_game" destroyed)
 	instance_destroy();
 }
 
@@ -17,7 +18,7 @@ if time <= 0 {
 	
 	if money < 0 {
 		room_persistent = false;
-		room_goto(rm_lose);	
+		room_goto(rm_lose);
 	}
 	time = rent_due;
 }
