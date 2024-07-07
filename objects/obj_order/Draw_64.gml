@@ -13,11 +13,16 @@ draw_set_font(_save_font);
 for (var _i = 0; _i < array_length(ingredients); _i++ ){
 	var _alpha = 1;
 	
+	draw_sprite(spr_checkbox, 0, x + 175 + (167*_i), y - 18);
+	
 	if obj_game.ing_found[$ ingredients[_i]] = 0 {
-		_alpha = 0.5;	
+		_alpha = 0.5;
+	} else {
+		draw_sprite_ext(spr_checkmark, 0, x + 175 + (167*_i), y - 40, 0.7, 0.7, 0,c_white,1);	
 	}
 	
 	draw_sprite_ext(item_sprite(ingredients[_i]), 0, x + 131 + (167 * _i), y + 30, 1, 1, 0, c_white,_alpha);
+	
 }
 
 var _ready = 0;
