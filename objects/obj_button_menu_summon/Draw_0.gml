@@ -11,5 +11,3 @@ if disable {
 	// Inherit the parent event
 	event_inherited();
 }
-
-

@@ -11,9 +11,9 @@ if !disable {
 	    var _inst =  instance_find(obj_order, _i);
 	
 		if _inst.delivery_ready {
-			obj_game.money += _inst.value;
 			ds_list_delete(obj_game.orders , ds_list_find_index(obj_game.orders, _inst.list_val));
 			show_debug_message(_inst.list_pos);
+			obj_game.on_order_delivered(_inst);
 		}
 	
 	}

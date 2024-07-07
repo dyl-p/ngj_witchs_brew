@@ -18,9 +18,6 @@ if time <= 0 {
 	if money < 0 {
 		room_persistent = false;
 		room_goto(rm_lose);	
-	} else if money > 0 {
-		room_persistent = false;
-		room_goto(rm_win);	
 	}
 	time = rent_due;
 }

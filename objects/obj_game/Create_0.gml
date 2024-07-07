@@ -2,6 +2,13 @@
 // You can write your code in this editor
 
 
+/* 
+user events:
+0 - order delivered
+1 - ingredient picked up
+*/
+
+
 //if instance_number(obj_game) > 1 {
 //	instance_destroy();	
 //}
@@ -33,5 +40,15 @@ orders = ds_list_create();
 
 ds_list_add(orders, new cat()  );
 ds_list_add(orders, new owl()  );
+
+on_order_delivered = function(_order){
+	money += _order.value;
+	
+	if money >= rent_amount {
+		// woohoo you made rent!
+		room_persistent = false;
+		room_goto(rm_win);	
+	}
+}
 
 room_persistent = true;
