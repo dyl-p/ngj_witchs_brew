@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hair_ball",
-    "path":"sprites/spr_hair_ball/spr_hair_ball.yy",
+    "name":"spr_cat",
+    "path":"sprites/spr_cat/spr_cat.yy",
   },
   "spriteMaskId":null,
   "visible":true,

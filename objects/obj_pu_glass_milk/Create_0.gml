@@ -3,5 +3,4 @@
 
 // Inherit the parent event
 event_inherited();
-
-item_name = "glass_milk";
+item_name = "glass_milk"
