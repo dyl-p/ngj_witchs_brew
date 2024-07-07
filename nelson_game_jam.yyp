@@ -53,6 +53,7 @@
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_order","path":"objects/obj_order/obj_order.yy",},},
     {"id":{"name":"obj_phone","path":"objects/obj_phone/obj_phone.yy",},},
+    {"id":{"name":"obj_pickup_hint","path":"objects/obj_pickup_hint/obj_pickup_hint.yy",},},
     {"id":{"name":"obj_pickup_ind","path":"objects/obj_pickup_ind/obj_pickup_ind.yy",},},
     {"id":{"name":"obj_player_hands","path":"objects/obj_player_hands/obj_player_hands.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
