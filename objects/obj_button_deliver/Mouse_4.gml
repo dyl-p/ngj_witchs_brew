@@ -1,7 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-obj_game.money += value;
+var _game = instance_find(obj_game,0);
+
+if !delivered {
+	with _game {
+		money = money + other.val;	
+	}
+
+	delivered = true;
+}
+
 
 if list_pos != -1 {
 	show_debug_message(list_pos);

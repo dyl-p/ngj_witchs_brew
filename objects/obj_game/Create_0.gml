@@ -10,6 +10,11 @@ randomize();
 
 money = 0;
 
+//30 days @ 15 seconds per day @ 60 frames per second
+rent_due = 30 * 0.5 * 60;
+time = rent_due;
+rent_amount = 350;
+
 //list ingredients held
 ing_found = {
 	lightning: 1,
@@ -27,7 +32,8 @@ scr_add_potion(orders);
 
 show_debug_message(orders[|0].name);
 
-
 //create buttons for main room
 
 btn_order = instance_create_layer(0,0,"Instances_GUI", obj_button);
+
+room_persistent = true;

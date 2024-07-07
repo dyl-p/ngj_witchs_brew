@@ -6,4 +6,6 @@ event_inherited();
 
 list_pos = -1;
 order = -1;
-value = -1;
+val = -1;
+
+delivered = false;
