@@ -3,5 +3,4 @@
 
 // Inherit the parent event
 event_inherited();
-
-item_name = "hairball";
+item_name = "hairball"

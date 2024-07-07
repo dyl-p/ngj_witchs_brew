@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_owl_feather",
-    "path":"sprites/spr_owl_feather/spr_owl_feather.yy",
+    "name":"spr_tree_owl",
+    "path":"sprites/spr_tree_owl/spr_tree_owl.yy",
   },
   "spriteMaskId":null,
   "visible":true,

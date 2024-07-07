@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_milk",
-    "path":"sprites/spr_milk/spr_milk.yy",
+    "name":"spr_cow",
+    "path":"sprites/spr_cow/spr_cow.yy",
   },
   "spriteMaskId":null,
   "visible":true,

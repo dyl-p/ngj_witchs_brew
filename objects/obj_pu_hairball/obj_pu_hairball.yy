@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cattails",
-    "path":"sprites/spr_cattails/spr_cattails.yy",
+    "name":"spr_cat",
+    "path":"sprites/spr_cat/spr_cat.yy",
   },
   "spriteMaskId":null,
   "visible":true,
