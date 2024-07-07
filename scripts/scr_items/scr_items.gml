@@ -3,22 +3,16 @@
 
 function item_add(_name){
 		
-	var _array = obj_game.ingredients;
-		
-	for (var _i = 0; _i < array_length(_array); _i++) {
-		if _array[_i][0] == _name {
-			_array[_i][1] += 1;
-			
-			break;
-		}
-	}
+	obj_game.ing_found[$ _name] = 1;
 }
 
 function item_sprite(_name){
 	
 	switch (_name) {
-	    case "lightning":
-	        return spr_item_lightning;
+	    case "half_coffee":
+	        return spr_half_coffee;
+		case "owl_feather":
+			return spr_owl_feather;
 	    default:
 	        // code here
 	        break;

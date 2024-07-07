@@ -1,12 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_text(x-240, y, name);
+draw_text(x-180, y, name);
 for (var _i = 0; _i < array_length(ingredients); _i++ ){
-	draw_text(x + (90 * _i), y , ingredients[_i]);	
+	draw_text(x + (120 * _i), y , ingredients[_i]);	
 }
 
-draw_text(x + 240, y , value);
+draw_text(x + 360, y , value);
 
 
 var _ready = 0;
@@ -22,7 +22,7 @@ if !delivery_check {
 if !delivery_check_2 {
 	if _ready == array_length(ingredients) {
 		delivery_ready = true;
-		var _del = instance_create_layer(x + 400, y, "Objects", obj_button_deliver);
+		var _del = instance_create_layer(x + 400, y, "Instances", obj_button_deliver);
 		_del.text = "Deliver Potion";
 		_del.list_pos = list_pos;
 		_del.order = id;

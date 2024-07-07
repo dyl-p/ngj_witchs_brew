@@ -14,14 +14,14 @@ function potion () constructor {
 
 function cat (): potion () constructor {
 	name="Talk to Cats"
-	ingredients = ["lightning", "grass"];
+	ingredients = ["glass_milk", "cattail", "hairball"];
 	value = 250;
 	//spr = spr_cat;
 }
 
 function owl (): potion () constructor {
 	name="Night Owl"
-	ingredients = ["lightning", "grass"];
+	ingredients = ["half_coffee", "owl_feather"];
 	value = 250;
 	//spr = spr_owl;
 }

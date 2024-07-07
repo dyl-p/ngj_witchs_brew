@@ -4,7 +4,10 @@ if room == rm_lose || room == rm_win {
 	instance_destroy();
 }
 
-time--;
+
+if room == Room1 {
+	time--;
+}
 
 if time <= 0 {
 	//game over stuff
@@ -21,3 +24,5 @@ if time <= 0 {
 	}
 	time = rent_due;
 }
+
+show_debug_message(ing_found);
