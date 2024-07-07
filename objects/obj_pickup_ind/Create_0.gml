@@ -1,4 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-instance_destroy();
+timer_life = 180;
+
+item_name = "";

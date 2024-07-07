@@ -104,27 +104,27 @@ switch (dir) {
 	case "left":
 		sprite_index = spr_player;
 		pickup.x = x - 
-			(sprite_width / 2) - 
-			(pickup.sprite_width / 2);
+			(sprite_width / 4) - 
+			(pickup.sprite_width / 4);
 		pickup.y = y;
 		break;
 	case "right":
 		sprite_index = spr_player_right;
 		pickup.x = x + 
-			abs((sprite_width / 2)) + 
-			(pickup.sprite_width / 2);	
+			abs((sprite_width / 4)) + 
+			(pickup.sprite_width / 4);	
 		pickup.y = y;
 		break;
 	case "up":
 		sprite_index = spr_player_up;
 
 		pickup.x = x;
-		pickup.y = y - sprite_height;
+		pickup.y = y - ((1 * sprite_height)/2);
 		break;
 	case "down":
 		sprite_index = spr_player_down;
 		pickup.x = x;
-		pickup.y = y + pickup.sprite_height;
+		pickup.y = y + ((2*pickup.sprite_height)/3);
 		break;
 }
 
