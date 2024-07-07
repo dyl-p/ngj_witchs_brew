@@ -2,8 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 function item_add(_name){
-		
 	obj_game.ing_found[$ _name] = 1;
+}
+
+function item_remove(_name){
+	obj_game.ing_found[$ _name] = 0;
 }
 
 //based on the item name get it's sprite!

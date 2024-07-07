@@ -12,7 +12,6 @@ if !disable {
 	
 		if _inst.delivery_ready {
 			ds_list_delete(obj_game.orders , ds_list_find_index(obj_game.orders, _inst.list_val));
-			show_debug_message(_inst.list_pos);
 			obj_game.on_order_delivered(_inst);
 		}
 	
