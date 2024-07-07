@@ -23,6 +23,6 @@ var _time_day = _time div (60*24);
 var _time_hour = (_time mod (30*48)) div 60;
 
 draw_self();
-draw_text(x, y - 140, string(_time_day) + " Days, " + string(_time_hour) + " Hours");
+draw_text(x, y - 140, "Rent Due: " + string(_time_day) + " Days, " + string(_time_hour) + " Hours");
 
 draw_set_font(_font_old);
