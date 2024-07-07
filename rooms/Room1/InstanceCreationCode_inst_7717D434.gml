@@ -1,1 +1,1 @@
-text = "Check Orders";
+text = "";

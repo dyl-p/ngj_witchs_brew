@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-name = "";
+nm = "";
 ingredients=[];
 value = 0;
 list_pos = -1;

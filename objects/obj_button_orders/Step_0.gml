@@ -3,6 +3,6 @@
 
 
 
-x = (view_get_wport(0) / 2) + camera_get_view_x(view_camera[0]);
-y = ((7*view_get_hport(0)) / 8) + camera_get_view_y(view_camera[0]);
+x = (view_get_wport(0) / 9) + camera_get_view_x(view_camera[0]);
+y = (1020 + camera_get_view_y(view_camera[0]));
 

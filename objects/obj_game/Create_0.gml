@@ -11,17 +11,17 @@ randomize();
 money = 0;
 
 //30 days @ 15 seconds per day @ 60 frames per second
-rent_due = 30 * 5 * 60;
+rent_due = 30 * 0.2 * 60;
 time = rent_due;
 rent_amount = 350;
 
 //list ingredients held
 ing_found = {
-	half_coffee: 0,
-	owl_feather: 0,
-	cattail: 0,
-	hairball: 0,
-	glass_milk: 0
+	half_coffee: 1,
+	owl_feather: 1,
+	cattail: 1,
+	hairball: 1,
+	glass_milk: 1
 };
 
 /*
@@ -39,8 +39,11 @@ glass of milk (from the cow in the commune)
 orders = ds_list_create();
 
 //testing add two potions to order
-scr_add_potion(orders);
-scr_add_potion(orders);
+//scr_add_potion(orders);
+//scr_add_potion(orders);
+
+ds_list_add(orders, new cat()  );
+ds_list_add(orders, new owl()  );
 
 //show_debug_message(orders[|0].name);
 

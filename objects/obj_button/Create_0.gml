@@ -3,4 +3,3 @@
 
 next_room = rm_orders;
 text = "Orders";
-main_pers = true;

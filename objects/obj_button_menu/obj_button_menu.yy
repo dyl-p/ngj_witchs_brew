@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_button",
-    "path":"sprites/spr_button/spr_button.yy",
+    "name":"spr_cream_button",
+    "path":"sprites/spr_cream_button/spr_cream_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

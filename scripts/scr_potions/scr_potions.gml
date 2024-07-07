@@ -7,20 +7,20 @@ function scr_add_potion(_list){
 }
 
 function potion () constructor {
-	name="";
+	nm="";
 	ingredients=[];
 	value = 0;
 }
 
 function cat (): potion () constructor {
-	name="Talk to Cats"
+	nm="Talk to Cats"
 	ingredients = ["glass_milk", "cattail", "hairball"];
 	value = 250;
 	spr = spr_speaktocatspotion;
 }
 
 function owl (): potion () constructor {
-	name="Night Owl"
+	nm="Night Owl"
 	ingredients = ["half_coffee", "owl_feather"];
 	value = 250;
 	spr = spr_nightowlpotion;
