@@ -3,7 +3,6 @@
 
 //only do things if the button is enabled
 if !disable {
-
 	var _order = []
 
 	for (var _i = 0; _i < instance_number(obj_order); _i++;)
@@ -14,8 +13,9 @@ if !disable {
 			obj_game.on_order_delivered(_inst);
 		}
 	}
+	
+	//obj_crow.call();
 
 	// Inherit the parent event
-	event_inherited();
-
+	event_inherited();	
 }

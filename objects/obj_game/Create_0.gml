@@ -1,14 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-/* 
-user events:
-0 - order delivered
-1 - ingredient picked up
-*/
-
-
 if instance_number(obj_game) > 1 {
 	instance_destroy();	
 }
@@ -17,11 +9,12 @@ if instance_number(obj_game) > 1 {
 randomize();
 
 money = -666;
-
 //30 days @ 15 seconds per day @ 60 frames per second
 rent_due = 30 * 24 * 60;
 time = rent_due;
 rent_amount = 0;
+
+is_fam_requested = false;
 
 //list ingredients held
 ing_found = {
@@ -61,7 +54,7 @@ on_order_delivered = function(_order){
 	// remove completed order from list
 	ds_list_delete(orders , ds_list_find_index(orders, _order.list_val));
 	send_next_order()
-	
+	is_fam_requested = true;
 }
 
 room_persistent = true;

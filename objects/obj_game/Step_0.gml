@@ -8,6 +8,10 @@ if room == rm_lose || room == rm_win {
 
 if room == Room1 {
 	time--;
+	if(is_fam_requested){
+		is_fam_requested = false;
+		instance_create_layer(-666, -666, "Instances_GUI",obj_crow);
+	}
 }
 
 if time <= 0 {
