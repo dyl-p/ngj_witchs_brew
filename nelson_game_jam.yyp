@@ -83,6 +83,7 @@
     {"id":{"name":"obj_pu","path":"objects/obj_pu/obj_pu.yy",},},
     {"id":{"name":"obj_value","path":"objects/obj_value/obj_value.yy",},},
     {"id":{"name":"rm_lose","path":"rooms/rm_lose/rm_lose.yy",},},
+    {"id":{"name":"rm_mapp","path":"rooms/rm_mapp/rm_mapp.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_orders","path":"rooms/rm_orders/rm_orders.yy",},},
     {"id":{"name":"rm_win","path":"rooms/rm_win/rm_win.yy",},},
@@ -143,6 +144,7 @@
     {"id":{"name":"spr_icon_synringe","path":"sprites/spr_icon_synringe/spr_icon_synringe.yy",},},
     {"id":{"name":"spr_icon_waterbottle","path":"sprites/spr_icon_waterbottle/spr_icon_waterbottle.yy",},},
     {"id":{"name":"spr_icon_wine_glass","path":"sprites/spr_icon_wine_glass/spr_icon_wine_glass.yy",},},
+    {"id":{"name":"spr_mapp","path":"sprites/spr_mapp/spr_mapp.yy",},},
     {"id":{"name":"spr_milk","path":"sprites/spr_milk/spr_milk.yy",},},
     {"id":{"name":"spr_move_test","path":"sprites/spr_move_test/spr_move_test.yy",},},
     {"id":{"name":"spr_newt","path":"sprites/spr_newt/spr_newt.yy",},},
@@ -190,6 +192,7 @@
     {"roomId":{"name":"rm_orders","path":"rooms/rm_orders/rm_orders.yy",},},
     {"roomId":{"name":"rm_win","path":"rooms/rm_win/rm_win.yy",},},
     {"roomId":{"name":"rm_lose","path":"rooms/rm_lose/rm_lose.yy",},},
+    {"roomId":{"name":"rm_mapp","path":"rooms/rm_mapp/rm_mapp.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

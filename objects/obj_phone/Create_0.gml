@@ -13,7 +13,7 @@ btn_potiondash.next_room = rm_orders;
 btn_map = instance_create_layer(x, y, "Instances_GUI",obj_button_menu_map);
 btn_map.depth = depth - 1;
 btn_map.text = "";
-btn_map.next_room = rm_orders;
+btn_map.next_room = rm_mapp;
 
 btn_money = instance_create_layer(x, y, "Instances_GUI",obj_button_menu_money);
 btn_money.depth = depth - 1;
