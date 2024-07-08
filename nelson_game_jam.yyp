@@ -56,6 +56,7 @@
     {"id":{"name":"obj_button_orders","path":"objects/obj_button_orders/obj_button_orders.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
+    {"id":{"name":"obj_check_win","path":"objects/obj_check_win/obj_check_win.yy",},},
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_order","path":"objects/obj_order/obj_order.yy",},},

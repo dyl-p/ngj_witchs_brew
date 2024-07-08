@@ -16,12 +16,12 @@ if instance_number(obj_game) > 1 {
 //set randomness
 randomize();
 
-money = 0;
+money = -666;
 
 //30 days @ 15 seconds per day @ 60 frames per second
 rent_due = 30 * 24 * 60;
 time = rent_due;
-rent_amount = 666;
+rent_amount = 0;
 
 //list ingredients held
 ing_found = {
@@ -62,11 +62,6 @@ on_order_delivered = function(_order){
 	ds_list_delete(orders , ds_list_find_index(orders, _order.list_val));
 	send_next_order()
 	
-	if money >= rent_amount {
-		// woohoo you made rent!
-		room_persistent = false;
-		room_goto(rm_win);	
-	}
 }
 
 room_persistent = true;
