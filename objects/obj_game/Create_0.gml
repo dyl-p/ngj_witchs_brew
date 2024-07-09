@@ -58,5 +58,3 @@ on_order_delivered = function(_order){
 }
 
 room_persistent = true;
-
-audio_play_sound(snd_potiondash_better_music,1,true);

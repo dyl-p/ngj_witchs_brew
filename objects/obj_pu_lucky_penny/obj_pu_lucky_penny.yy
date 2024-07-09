@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_pu_lucky_penny",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_pu_lucky_penny",
   "overriddenProperties":[],
@@ -11,10 +9,7 @@
     "name":"interactibles",
     "path":"folders/Objects/interactibles.yy",
   },
-  "parentObjectId":{
-    "name":"obj_pu",
-    "path":"objects/obj_pu/obj_pu.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

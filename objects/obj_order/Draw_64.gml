@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 //draw potion and name
+
 draw_sprite(obj_game.orders[|list_pos].spr, 0, x - 30, y-30);
 
 var _save_font = draw_get_font();

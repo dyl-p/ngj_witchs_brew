@@ -26,3 +26,7 @@ if time <= 0 {
 	}
 	time = rent_due;
 }
+
+if !audio_is_playing(snd_potiondash_better_music){
+	audio_play_sound(snd_potiondash_better_music,1, true);	
+}
