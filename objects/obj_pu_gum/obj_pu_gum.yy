@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pu_rose",
+  "%Name":"obj_pu_gum",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pu_rose",
+  "name":"obj_pu_gum",
   "overriddenProperties":[],
   "parent":{
     "name":"interactibles",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"rose_bush",
-    "path":"sprites/rose_bush/rose_bush.yy",
+    "name":"spr_icon_gum",
+    "path":"sprites/spr_icon_gum/spr_icon_gum.yy",
   },
   "spriteMaskId":null,
   "visible":true,

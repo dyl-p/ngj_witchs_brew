@@ -15,18 +15,18 @@ function item_remove(_name){
 
 //based on the item name get it's sprite!
 function item_sprite(_name){
-	
+	show_debug_message(_name);
 	switch (_name) {
 	    case "half_coffee":
 	        return spr_coffee;
 		case "owl_feather":
-			return spr_owl_feather;
+			return spr_icon_owl_feather;
 	    case "cattail":
-	        return spr_cattails_menu;
+	        return spr_icon_cattails;
 		case "glass_milk":
-			return spr_milk;
+			return spr_icon_milk;
 	    case "hairball":
-	        return spr_hair_ball;
+	        return spr_icon_hairball;
 		case "ash":
 			return spr_icon_ash;
 		case "bacon":
@@ -43,6 +43,14 @@ function item_sprite(_name){
 			return spr_icon_waterbottle;
 		case "wine":
 			return spr_icon_wine_glass;
+		case "heartstone":
+			return spr_icon_heartstone;
+		case "gum":
+			return spr_icon_gum;
+		case "rose":
+			return spr_icon_rose;
+		case "banana":
+			return spr_icon_banana;
 	    default:
 	        // code here
 	        break;
@@ -79,6 +87,14 @@ function item_desc(_name){
 			return "a bottle of fizzy water";
 		case "wine":
 			return "someone's abandoned wine glass";
+		case "heartstone":
+			return "a heartstone from the mountain";
+		case "gum":
+			return "previously enjoyed gum";
+		case "rose":
+			return "a beautiful rose";
+		case "banana":
+			return "a slippery banana peel";
 	    default:
 	        // code here
 	        break;
