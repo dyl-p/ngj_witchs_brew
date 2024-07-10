@@ -1,131 +1,157 @@
 /// @description Insert description here
 // You can write your code in this editor
+#region input mapping
 
-depth = -y;
+var _move_up = keyboard_check(ord("W"));
+var _move_down = keyboard_check(ord("S"));
+var _move_left = keyboard_check(ord("A"));
+var _move_right = keyboard_check(ord("D"));
 
-#region movement
+#endregion
 
-var _in_up = keyboard_check(ord("W")) || gamepad_button_check(0, gp_padu);
-var _in_down = keyboard_check(ord("S"))|| gamepad_button_check(0, gp_padd);
-var _in_left = keyboard_check(ord("A"))|| gamepad_button_check(0, gp_padl);
-var _in_right = keyboard_check(ord("D"))|| gamepad_button_check(0, gp_padr);
+#region accelerated joystick based movement
 
-var _mv_x = 0;
-var _mv_y = 0;
+if ( _move_right || _move_left || _move_up || _move_down ) {
+	
+	var _dir_x = _move_right - _move_left;
+	var _dir_y = _move_down - _move_up;
+	var _dir_angle = point_direction(x, y, x + _dir_x, y + _dir_y);
+	//show_debug_message(_dir_angle);
 
-if _in_left || _in_right {
-	_mv_x = _in_right - _in_left;
-	if _mv_x < 0 {
-		dir = "left";
-	} else if _mv_x > 0 {
-		dir = "right";	
-	}
-}
-if _in_up || _in_down {
-	_mv_y = _in_down - _in_up;
-	if _mv_y < 0 {
-		dir = "up";
-	} else if _mv_y > 0 {
-		dir = "down";	
-	}
-}
+	
+	var _dir_diff = angle_difference(_dir_angle, image_angle);
+	
+	direction = _dir_angle;
+	
+	my_speed = my_speed_max;
 
+	
+	////change direction of sprite based on direction of movement
+	//if direction > 90 && direction < 270 {
+	//	image_xscale = -1;
+	//} else {
+	//	image_xscale = 1;	
+	//}
 
-
-if ( _mv_x != 0 && _mv_y != 0 ) {
-	_mv_x *= spd_angle * spd;
-	_mv_y *= spd_angle * spd;
 } else {
-	_mv_x *= spd;
-	_mv_y *= spd;	
+	//my_speed *= my_friction;
+	
+	my_speed = 0
+	
+	if my_speed < 0 {
+		my_speed = 0;
+	}
 }
-
 #endregion
 
 #region collision
 
-if place_meeting(x+ _mv_x, y + _mv_y, obj_collision){
+//check collision or move
+if (place_meeting(x + lengthdir_x(my_speed, direction), y + lengthdir_y(my_speed, direction), obj_collision)){
 	
-	//make the character's x, y integer values
-	if sign(_mv_x) > 0 {
-		x = ceil(x);
-		_mv_x = floor(_mv_x);
-	} else {
-		x = floor(x);
-		_mv_x = ceil(_mv_x);		
-	}
+	//get x and y values of where we would place the character
+	var _x = x + lengthdir_x(my_speed, direction);
 	
-	if sign(_mv_y) > 0 {
-		y = ceil(y);
-		_mv_y = floor(_mv_y);
-	} else {
-		y = floor(y);
-		_mv_y = ceil(_mv_y);		
-	}
+	
+	// if we're heading right
+	if (0 <= direction && direction < 90) || (270 < direction && direction <= 360) {
 
-	var _x_sign = sign(_mv_x);
-	var _y_sign = sign(_mv_y);
+		//set the next move x to the highest value
+		_x = ceil(_x);
+		
+		//work backwards until we don't have a collision anymore
+		while place_meeting(_x, y, obj_collision) {
+			_x--;
+		}
+
+	//if we're heading left
+	} else {
+		
+		//set the next x value to the lowest (furthest away) value
+		_x = floor(_x);
+		
+		//work backwards until there isn't a collision anymore
+		while place_meeting(_x, y, obj_collision) {
+			_x++;
+		}
+	}
 	
-	while place_meeting(x + _mv_x, y, obj_collision){
-		if _x_sign > 0 {
-			_mv_x -= 1;	
-		} else {
-			_mv_x += 1;	
+	var _y = y + lengthdir_y(my_speed, direction);
+	
+	//if we're heading down
+	if (180 < direction && direction < 360) {
+
+		_y = ceil(_y);
+		
+		while place_meeting(_x, _y, obj_collision) {
+			_y--;
 		}
 		
-		if _mv_x == 0 { break; }
-	}
-	
-	while place_meeting(x, y + _mv_y, obj_collision){
-		if _y_sign > 0 {
-			_mv_y -= 1;	
-		} else {
-			_mv_y += 1;	
-		}
+	//if we're heading up
+	} else {
+
+		_y = floor(_y);
 		
-		if _mv_y == 0 { break; }
+		while place_meeting(_x, _y, obj_collision) {
+			_y++;
+		}	
 	}
-}
 
-x += _mv_x;
-y += _mv_y;
+	//set new x and y values
+	x = _x;
+	y = _y;
 
-#endregion
+	//set speed to zero
+	my_speed = 0;
 
-#region set sprite
-
-if _mv_x == 0 && _mv_y == 0 {
-	image_speed = 0;	
 } else {
-	image_speed = 1;
-}	
-
-switch (dir) {
-	case "left":
-		sprite_index = spr_player;
-		pickup.x = x - 
-			(sprite_width / 4) - 
-			(pickup.sprite_width / 4);
-		pickup.y = y;
-		break;
-	case "right":
-		sprite_index = spr_player_right;
-		pickup.x = x + 
-			abs((sprite_width / 4)) + 
-			(pickup.sprite_width / 4);	
-		pickup.y = y;
-		break;
-	case "up":
-		sprite_index = spr_player_up;
-
-		pickup.x = x;
-		pickup.y = y - ((1 * sprite_height)/2);
-		break;
-	case "down":
-		sprite_index = spr_player_down;
-		pickup.x = x;
-		pickup.y = y + ((2*pickup.sprite_height)/3);
-		break;
+	//if there wasn't a collision move!
+	x = x + lengthdir_x(my_speed, direction);
+	y = y + lengthdir_y(my_speed, direction);
 }
-
 #endregion
+
+if instance_exists(my_pickup) {
+
+	my_pickup.y = y;
+	my_pickup.x = x;
+
+	if 45 <= direction && direction <= 135 {
+		my_pickup.y = y - (my_pickup_dist_v*2);
+		sprite_index = spr_player_up;
+	} else if 135 < direction && direction < 225 {
+		my_pickup.x = x - my_pickup_dist_h;
+		sprite_index = spr_player;
+	} else if 225 <= direction && direction <= 315{
+		my_pickup.y = y + my_pickup_dist_v;
+		sprite_index = spr_player_down;
+	} else {
+		my_pickup.x = x + my_pickup_dist_h;	
+		sprite_index = spr_player_right;
+	}
+
+	
+
+}
+	
+#region camera
+	camera_set_view_pos(view_camera[0], x - (camera_get_view_width(view_camera[0]) / 2), y - (camera_get_view_height(view_camera[0]) / 2));
+#endregion
+
+//show_debug_message("Player V: (" + string(x) + ", " + string(y) + ")");
+
+//var _baby_held = instance_nearest(x, y, obj_baby).being_held;
+
+//if my_speed == 0 {
+//	if _baby_held {
+//		sprite_index = spr_player_beb_idle;	
+//	} else {
+//		sprite_index = spr_player_idle;
+//	}
+//} else {
+//	if _baby_held {
+//		sprite_index = spr_player_beb;	
+//	} else {
+//		sprite_index = spr_player_run;
+//	}
+//}
