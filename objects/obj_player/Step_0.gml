@@ -5,6 +5,7 @@ depth = -y;
 
 #region movement
 
+<<<<<<< Updated upstream
 var _in_up = keyboard_check(ord("W")) || gamepad_button_check(0, gp_padu);
 var _in_down = keyboard_check(ord("S"))|| gamepad_button_check(0, gp_padd);
 var _in_left = keyboard_check(ord("A"))|| gamepad_button_check(0, gp_padl);
@@ -129,3 +130,41 @@ switch (dir) {
 }
 
 #endregion
+=======
+var _dir_x = _move_right - _move_left;
+var _dir_y = _move_down - _move_up;
+
+if _dir_x != 0 && _dir_y != 0 {
+	_dir_x = _dir_x / sqrt(sqr(_dir_x) + sqr(_dir_y));	
+	_dir_y = _dir_y / sqrt(sqr(_dir_x) + sqr(_dir_y));
+}
+
+//if we aren't moving stop animating
+if _dir_x == 0 && _dir_y == 0 {
+	image_speed = 0;
+} else {
+	image_speed = 1;
+}
+
+//set which sprite to use
+if _move_up {
+	sprite_index = spr_player_up;	
+} else if _move_down {
+	sprite_index = spr_player_down;
+} else if _move_right {
+	sprite_index = spr_player_right;
+} else {
+	sprite_index = spr_player;	
+}
+
+//do the movement
+move_and_collide(_dir_x*(my_speed_max), _dir_y*(my_speed_max),obj_collision);
+
+
+
+#region camera
+	//camera_set_view_pos(view_camera[0], x - (camera_get_view_width(view_camera[0]) / 2), y - (camera_get_view_height(view_camera[0]) / 2));
+#endregion
+
+depth = -y;
+>>>>>>> Stashed changes

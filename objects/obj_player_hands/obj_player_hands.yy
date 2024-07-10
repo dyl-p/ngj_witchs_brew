@@ -32,5 +32,5 @@
     "path":"sprites/spr_pickup/spr_pickup.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

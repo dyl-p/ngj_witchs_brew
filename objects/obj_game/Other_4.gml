@@ -12,3 +12,8 @@ if room_get_name(room) == "rm_orders" {
 		_inst.list_val = ds_list_find_value(orders, _i);
 	}
 }
+
+//if we've won or lost destory this object so it gets created again if the player restarts
+if room == rm_win || room == rm_lose{
+	instance_destroy();
+}
