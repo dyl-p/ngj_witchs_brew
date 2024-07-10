@@ -128,18 +128,20 @@ if instance_exists(my_pickup) {
 
 	my_pickup.y = y;
 	my_pickup.x = x;
+	
+	var _pickup_offset = 0;
 
 	if 45 <= direction && direction <= 135 {
-		my_pickup.y = y - (my_pickup_dist_v*2);
+		my_pickup.y = y - (my_pickup_dist_v) + 20;
 		sprite_index = spr_player_up;
 	} else if 135 < direction && direction < 225 {
-		my_pickup.x = x - my_pickup_dist_h;
+		my_pickup.x = x - my_pickup_dist_h + _pickup_offset;
 		sprite_index = spr_player;
 	} else if 225 <= direction && direction <= 315{
-		my_pickup.y = y + my_pickup_dist_v;
+		my_pickup.y = y + my_pickup_dist_v + 30;
 		sprite_index = spr_player_down;
 	} else {
-		my_pickup.x = x + my_pickup_dist_h;	
+		my_pickup.x = x + my_pickup_dist_h - _pickup_offset;	
 		sprite_index = spr_player_right;
 	}
 
