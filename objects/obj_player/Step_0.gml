@@ -24,9 +24,22 @@ if ( _move_right || _move_left || _move_up || _move_down ) {
 	direction = _dir_angle;
 	
 	my_speed = my_speed_max;
-
 	
-	////change direction of sprite based on direction of movement
+	
+	//movement with acceleration
+	/*
+	if my_speed == 0 {
+		my_speed = my_speed_start;	
+	}
+	
+	my_speed *= my_acceleration;
+	
+	if my_speed > my_speed_max {
+		my_speed = my_speed_max;	
+	}
+	*/
+	
+	//change direction of sprite based on direction of movement
 	//if direction > 90 && direction < 270 {
 	//	image_xscale = -1;
 	//} else {
@@ -34,9 +47,9 @@ if ( _move_right || _move_left || _move_up || _move_down ) {
 	//}
 
 } else {
-	//my_speed *= my_friction;
+	my_speed *= my_friction;
 	
-	my_speed = 0
+	//my_speed = 0
 	
 	if my_speed < 0 {
 		my_speed = 0;
@@ -130,12 +143,17 @@ if instance_exists(my_pickup) {
 		sprite_index = spr_player_right;
 	}
 
-	
-
+	if my_speed < my_speed_start {
+		image_speed = 0;	
+	} else {
+		image_speed = 1;	
+	}
 }
 	
+depth = -y;
+
 #region camera
-	camera_set_view_pos(view_camera[0], x - (camera_get_view_width(view_camera[0]) / 2), y - (camera_get_view_height(view_camera[0]) / 2));
+	//camera_set_view_pos(view_camera[0], x - (camera_get_view_width(view_camera[0]) / 2), y - (camera_get_view_height(view_camera[0]) / 2));
 #endregion
 
 //show_debug_message("Player V: (" + string(x) + ", " + string(y) + ")");

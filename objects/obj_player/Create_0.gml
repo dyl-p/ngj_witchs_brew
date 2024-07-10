@@ -5,8 +5,8 @@
 
 my_speed = 0;
 my_speed_start = 0.1;
-my_speed_max = 8;
-my_acceleration = 1.35;
+my_speed_max = 7.5;
+my_acceleration = 1.45;
 my_friction = 0.8;
 my_angle_rot_max = 15;
 
@@ -15,5 +15,7 @@ my_pickup_dist_h = 30;
 my_pickup_dist_v = 30;
 
 dir_prev = 5;
+
+mask_index = spr_player;
 
 #endregion
