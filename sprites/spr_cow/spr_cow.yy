@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":91,
   "bbox_left":3,
-  "bbox_right":113,
+  "bbox_right":111,
   "bbox_top":17,
   "collisionKind":1,
   "collisionTolerance":0,
