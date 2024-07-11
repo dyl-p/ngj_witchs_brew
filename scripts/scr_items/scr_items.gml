@@ -15,7 +15,7 @@ function item_remove(_name){
 
 //based on the item name get it's sprite!
 function item_sprite(_name){
-	show_debug_message(_name);
+	//show_debug_message(_name);
 	switch (_name) {
 	    case "half_coffee":
 	        return spr_coffee;

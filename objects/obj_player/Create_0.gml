@@ -5,7 +5,7 @@
 
 my_speed = 0;
 my_speed_start = 0.1;
-my_speed_max = 7.5;
+my_speed_max = 6;
 my_acceleration = 1.45;
 my_friction = 0.8;
 my_angle_rot_max = 15;

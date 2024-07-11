@@ -13,7 +13,7 @@ if !delivered {
 
 
 if list_pos != -1 {
-	show_debug_message(list_pos);
+	//show_debug_message(list_pos);
 	ds_list_delete(obj_game.orders,list_pos);
 }
 

@@ -5,11 +5,11 @@ global.previous_orders = [];
 global.previous_orders_to_maintain = 2;
 function send_next_order(){	
 	var _possible_orders = [
-		//new potion_talktocats(), 
-		//new potion_nightowl(),
-		//new potion_antidepressant(),
-		//new potion_hangovercure(),
-		//new potion_beautyfilter(),
+		new potion_talktocats(), 
+		new potion_nightowl(),
+		new potion_antidepressant(),
+		new potion_hangovercure(),
+		new potion_beautyfilter(),
 		new potion_speedwalk(),
 		new potion_rizz(),
 	];
@@ -45,42 +45,42 @@ function potion_speedwalk (): potion () constructor {
 }
 
 function potion_rizz (): potion () constructor {
-	nm="Instant Rizz"
+	nm="Instant Rizz";
 	ingredients = ["heartstone", "gum", "rose"];
 	value = 105;
 	spr = spr_potion_rizzpotion;
 }
 
 function potion_talktocats (): potion () constructor {
-	nm="Talk to Cats"
+	nm="Talk to Cats";
 	ingredients = ["glass_milk", "cattail", "hairball"];
 	value = 105;
 	spr = spr_potion_speaktocats;
 }
 
 function potion_nightowl (): potion () constructor {
-	nm="Night Owl"
+	nm="Night Owl";
 	ingredients = ["half_coffee", "owl_feather"];
 	value = 75;
 	spr = spr_potion_nightowl;
 }
 
 function potion_antidepressant (): potion () constructor {
-	nm="Antidepressant"
+	nm="Antidepressant";
 	ingredients = ["ash", "waterbottle", "bacon"];
 	value = 99;
 	spr = spr_potion_antidepressent;
 }
 
 function potion_hangovercure (): potion () constructor {
-	nm="Hangover Cure"
+	nm="Hangover Cure";
 	ingredients = ["waterbottle", "eyeofnewt", "bandaid"];
 	value = 69;
 	spr = spr_potion_antihangover;
 }
 
 function potion_beautyfilter (): potion () constructor {
-	nm="Beauty Potion"
+	nm="Beauty Potion";
 	ingredients = ["wine", "syringe", "pictureoftoad"];
 	value = 128;
 	spr = spr_potion_beautyfilter;
