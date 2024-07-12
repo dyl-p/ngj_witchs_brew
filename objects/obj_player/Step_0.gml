@@ -2,10 +2,10 @@
 // You can write your code in this editor
 #region input mapping
 
-var _move_up = keyboard_check(ord("W"));
-var _move_down = keyboard_check(ord("S"));
-var _move_left = keyboard_check(ord("A"));
-var _move_right = keyboard_check(ord("D"));
+var _move_up = keyboard_check(ord("W")) || gamepad_button_check(0, gp_padu);
+var _move_down = keyboard_check(ord("S"))|| gamepad_button_check(0, gp_padd);
+var _move_left = keyboard_check(ord("A"))|| gamepad_button_check(0, gp_padl);
+var _move_right = keyboard_check(ord("D"))|| gamepad_button_check(0, gp_padr);
 
 #endregion
 
