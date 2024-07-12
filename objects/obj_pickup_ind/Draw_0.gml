@@ -2,8 +2,11 @@
 // You can write your code in this editor
 
 //move this object with the camera
+
 x = (view_get_wport(0) / 2) + camera_get_view_x(view_camera[0]);
 y = 800 + camera_get_view_y(view_camera[0])
+
+y -= y_offset;
 
 var _text = "You found " + item_desc(item_name) + "!"
 var _text_w = string_width(_text);

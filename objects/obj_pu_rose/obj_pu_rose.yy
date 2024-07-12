@@ -11,7 +11,10 @@
     "name":"interactibles",
     "path":"folders/Objects/interactibles.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_pu",
+    "path":"objects/obj_pu/obj_pu.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

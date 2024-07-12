@@ -30,7 +30,12 @@ ing_found = {
 	pictureoftoad: 0,
 	syringe: 0,
 	waterbottle: 0,
-	wine: 0
+	wine: 0,
+	banana: 0,
+	heartstone: 0,
+	gum: 0,
+	rose: 0,
+	lucky_penny: 0,
 };
 
 //list orders taken
