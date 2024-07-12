@@ -200,9 +200,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_test_move","path":"rooms/rm_test_move/rm_test_move.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"roomId":{"name":"rm_test_move","path":"rooms/rm_test_move/rm_test_move.yy",},},
     {"roomId":{"name":"rm_orders","path":"rooms/rm_orders/rm_orders.yy",},},
     {"roomId":{"name":"rm_win","path":"rooms/rm_win/rm_win.yy",},},
     {"roomId":{"name":"rm_lose","path":"rooms/rm_lose/rm_lose.yy",},},

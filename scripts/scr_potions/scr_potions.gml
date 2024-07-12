@@ -35,6 +35,7 @@ function potion () constructor {
 	nm="";
 	ingredients=[];
 	value = 0;
+	spr = -1;
 }
 
 function potion_speedwalk (): potion () constructor {

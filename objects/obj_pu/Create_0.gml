@@ -13,3 +13,11 @@ pick_up = function(){
 	var _inst = instance_create_layer(-10, -10 , "Instances_GUI",obj_pickup_ind);
 	_inst.item_name = item_name;	
 }
+
+add_to_inventory = function(){
+	item_add_inventory(item_name);
+	audio_play_sound(snd_pickup,1,false);
+	
+	var _inst = instance_create_layer(-10, -10 , "Instances_GUI",obj_pickup_ind);
+	_inst.item_name = item_name;
+}

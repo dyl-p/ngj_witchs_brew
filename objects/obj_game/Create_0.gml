@@ -38,6 +38,8 @@ ing_found = {
 	lucky_penny: 0,
 };
 
+inventory = ds_list_create();
+
 //list orders taken
 orders = ds_list_create();
 
