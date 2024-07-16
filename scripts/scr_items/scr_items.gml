@@ -52,7 +52,7 @@ function item_get_struct(_name){
 		case "bacon":
 			return new item_bacon();
 		case "bandaid":
-			return item_bandaid();
+			return new item_bandaid();
 		case "eyeofnewt":
 			return new item_eyeofnewt();
 		case "pictureoftoad":
@@ -128,7 +128,7 @@ function item_bacon (): item () constructor {
 function item_bandaid (): item () constructor {
 	nm="bandaid";
 	desc = "a gross used bandaid";
-	spr = spr_icon_bandaid;
+	spr = spr_bandaid;
 }
 
 function item_eyeofnewt (): item () constructor {
@@ -146,7 +146,7 @@ function item_pictureoftoad (): item () constructor {
 function item_syringe (): item () constructor {
 	nm="syringe";
 	desc = "a syringe, be careful!";
-	spr = spr_icon_synringe;
+	spr = spr_icon_syringe;
 }
 
 function item_waterbottle (): item () constructor {
@@ -164,7 +164,7 @@ function item_wine (): item () constructor {
 function item_heartstone (): item () constructor {
 	nm="heartstone";
 	desc = "a heartstone from the mountain";
-	spr = spr_heartstone;
+	spr = spr_icon_heartstone;
 }
 
 function item_gum (): item () constructor {

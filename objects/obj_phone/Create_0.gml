@@ -19,3 +19,8 @@ btn_money = instance_create_layer(x, y, "Instances_GUI",obj_button_menu_money);
 btn_money.depth = depth - 1;
 btn_money.text = "";
 btn_money.next_room = rm_orders;
+
+btn_inventory = instance_create_layer(x, y, "Instances_GUI",obj_button_menu);
+btn_inventory.depth = depth - 1;
+btn_inventory.text = "Inventory";
+btn_inventory.next_room = rm_inventory;

@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pu_syringe",
+  "%Name":"obj_inventory_display",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pu_syringe",
+  "name":"obj_inventory_display",
   "overriddenProperties":[],
   "parent":{
-    "name":"interactibles",
-    "path":"folders/Objects/interactibles.yy",
+    "name":"ui",
+    "path":"folders/Objects/ui.yy",
   },
-  "parentObjectId":{
-    "name":"obj_pu",
-    "path":"objects/obj_pu/obj_pu.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_syringe",
-    "path":"sprites/spr_syringe/spr_syringe.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

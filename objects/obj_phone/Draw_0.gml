@@ -2,11 +2,19 @@
 // You can write your code in this editor
 
 // follow camera and animate on hover
-x = (view_get_wport(0) / 9) + camera_get_view_x(view_camera[0]);
+
+var _w = camera_get_view_width(view_camera[0]);
+var _h = camera_get_view_height(view_camera[0]);
+var _x = camera_get_view_x(view_camera[0]);
+var _y = camera_get_view_y(view_camera[0]);
+
+//show_debug_message("Width: " + string(_w) + ", Height:" + string(_h) + ", x:" + string(_x) + ", y:" + string(_y));
+
+x = (_w / 9) + _x;
 if hover {
-	y = lerp(y, (900 + camera_get_view_y(view_camera[0])), 0.1);
+	y = lerp(y, (_h + _y), 0.1);
 } else {
-	y = lerp(y, (995 + camera_get_view_y(view_camera[0])), 0.1);	
+	y = lerp(y, (_h + (sprite_height/3) + _y), 0.1);	
 }
 btn_potiondash.x = x;
 btn_potiondash.y = y - 95;
@@ -14,6 +22,9 @@ btn_map.x = x - 35;
 btn_map.y = y - 40;
 btn_money.x = x + 35;
 btn_money.y = y - 40;
+
+btn_inventory.x = x;
+btn_inventory.y = y - 360;
 
 var _font_old = draw_get_font();
  draw_set_font(fnt_menu_small);

@@ -8,6 +8,9 @@ if instance_number(obj_game) > 1 {
 //set randomness
 randomize();
 
+//save room in case we use different levels
+my_room = room;
+
 money = -666;
 //30 days @ 15 seconds per day @ 60 frames per second
 rent_due = 30 * 24 * 60;
@@ -42,6 +45,8 @@ inventory = ds_list_create();
 
 //list orders taken
 orders = ds_list_create();
+
+
 
 //send first two orders
 send_next_order();
