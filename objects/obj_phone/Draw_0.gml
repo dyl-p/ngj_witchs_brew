@@ -16,15 +16,15 @@ if hover {
 } else {
 	y = lerp(y, (_h + (sprite_height/3) + _y), 0.1);	
 }
-btn_potiondash.x = x;
+btn_potiondash.x = x - (sprite_width/7);
 btn_potiondash.y = y - 95;
-btn_map.x = x - 35;
-btn_map.y = y - 40;
+btn_map.x = x + (sprite_width/4);
+btn_map.y = y - 95;
 btn_money.x = x + 35;
 btn_money.y = y - 40;
 
-btn_inventory.x = x;
-btn_inventory.y = y - 360;
+btn_inventory.x = x - 35;
+btn_inventory.y = y - 40;
 
 var _font_old = draw_get_font();
  draw_set_font(fnt_menu_small);

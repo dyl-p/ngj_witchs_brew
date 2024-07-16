@@ -22,5 +22,6 @@ btn_money.next_room = rm_orders;
 
 btn_inventory = instance_create_layer(x, y, "Instances_GUI",obj_button_menu);
 btn_inventory.depth = depth - 1;
-btn_inventory.text = "Inventory";
+btn_inventory.sprite_index = spr_button_money;
+btn_inventory.text = "INV";
 btn_inventory.next_room = rm_inventory;
