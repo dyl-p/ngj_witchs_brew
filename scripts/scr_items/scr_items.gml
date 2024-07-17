@@ -20,18 +20,30 @@ function item_add_inventory(_name){
 	var _item_added = false;
 	
 	for (var _i = 0; _i < ds_list_size(obj_game.inventory); _i++) {
-		if obj_game.inventory[| _i].nm	== _name {
-			//check to see if we've reached the max stack size
+		
+		//check to see if the current space has an inventory item
+		if obj_game.inventory[|_i] != -1 {
+			if obj_game.inventory[| _i].nm	== _name {
+				//check to see if we've reached the max stack size
 
 				obj_game.inventory[| _i].qty += 1;
 			
-			_item_added = true;
+				_item_added = true;
+			}
 		}
 	}
 	
 	//if the item doesn't exist on the list create a new one!
 	if !_item_added {
-		ds_list_add(obj_game.inventory, item_get_struct(_name));
+		
+		//the inventory is prepolated with -1 so you have to 
+		//use the replace function to keep the list size
+		for (var _i = 0; _i < ds_list_size(obj_game.inventory); _i++) {
+			if obj_game.inventory[|_i] == -1 {
+				ds_list_replace(obj_game.inventory, _i,item_get_struct(_name));
+				break;
+			}
+		}
 	}
 }
 
@@ -81,6 +93,7 @@ function item () constructor {
 	desc = "";			//description of item
 	sprite = noone;		//sprite of item
 	qty = 1;			//quantity of item
+	inv_loc = -1;
 }
 
 function item_half_coffee (): item () constructor {

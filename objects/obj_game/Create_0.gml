@@ -8,6 +8,9 @@ if instance_number(obj_game) > 1 {
 //set randomness
 randomize();
 
+max_inv_col = 9;
+max_inv_row = 5;
+
 //save room in case we use different levels
 my_room = room;
 
@@ -42,6 +45,10 @@ ing_found = {
 };
 
 inventory = ds_list_create();
+
+for (var _i = 0; _i < (max_inv_col * max_inv_row); _i ++) {
+	ds_list_add(inventory, -1);	
+}
 
 //list orders taken
 orders = ds_list_create();

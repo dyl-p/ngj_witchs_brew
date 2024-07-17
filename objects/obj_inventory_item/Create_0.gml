@@ -7,8 +7,8 @@ and description of the item is used in this
 item's create event
 */
 
-order = -1;
 sprite_index = spr;
+//qty = -1;
 
 //if this item was selected
 selected = false;
