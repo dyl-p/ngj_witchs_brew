@@ -3,43 +3,65 @@
 
 
 if selected {
-	
+
+#region check if we're placing on an inventory slot
+
 	//check to see if there is a slot or other item
 	var _inst_slot = instance_position(mouse_x, mouse_y, obj_inventory_slot);
 	
-	//get the item that is already in this slot (if any)
-	var _inst_item = noone;
-	
-	//from the view of the inventory slot
-		
-	_inst_item = instance_place(x, y, obj_inventory_item);
-	
-	//show_debug_message(_inst_item);
-	//if _inst_item { show_debug_message(_inst_item.selected); }
 	
 	//if there is a slot, center to where the item should be
 	if _inst_slot {
 		x = _inst_slot.x;
 		y = _inst_slot.y;
 		selected = false;	
+	
+		//put the item into the new place in the inventory array
+		
+		//if the thing is an item
+		if type == "item" {
+			//if the slot is in the inventory
+			if _inst_slot.position != -1 {
+				ds_list_replace(obj_game.inventory, _inst_slot.position, item_get_struct(nm));
+			}
+		//if the thing is a potion
+		} else if type == "potion" {
+			ds_list_replace(obj_game.inventory, _inst_slot.position, potion_get_struct(nm));
+		}
+		
+		//if the slot is in the inventory
+		if _inst_slot.position != -1 {
+			obj_game.inventory[|_inst_slot.position].qty = qty;
+		}
 	}
 	
-	//if there is an item, pick it up
-	//if _inst_item {
-	//	_inst_item.selected = true;	
-	//}
+#endregion
+
+//#region check to see if we're placing on the cauldron
+
+//	var _cauldron = instance_position(mouse_x, mouse_y, obj_cauldron);
 	
-	//put the item into the new place in the inventory array
-	ds_list_replace(obj_game.inventory, _inst_slot.position, item_get_struct(nm));
-	obj_game.inventory[|_inst_slot.position].qty = qty;
+//	if _cauldron && !_cauldron.brew_item_exists(nm){
+//		ds_list_add(_cauldron.brew,item_get_struct(nm));
+//		qty -= 1;
+		
+//		if qty == 0 {
+//			instance_destroy();	
+//		}
+//	}
+	
+
+//#endregion
 	
 } else {
 	
 	var _inst_slot = instance_place(x, y, obj_inventory_slot);
 	
 	//if we didn't just replace this object with a different one, empty the space in inventory
-	if obj_game.inventory[|_inst_slot.position].nm == nm {
-		ds_list_replace(obj_game.inventory, _inst_slot.position, -1);
+	if _inst_slot.position != -1 {
+		if obj_game.inventory[|_inst_slot.position].nm == nm {
+				ds_list_replace(obj_game.inventory, _inst_slot.position, -1);
+		}
 	}
 	
 	selected = true;

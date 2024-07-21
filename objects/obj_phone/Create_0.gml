@@ -25,3 +25,9 @@ btn_inventory.depth = depth - 1;
 btn_inventory.sprite_index = spr_button_money;
 btn_inventory.text = "INV";
 btn_inventory.next_room = rm_inventory;
+
+btn_cauldron = instance_create_layer(x, y, "Instances_GUI",obj_button_menu);
+btn_cauldron.depth = depth - 1;
+btn_cauldron.sprite_index = spr_button_money;
+btn_cauldron.text = "MIX";
+btn_cauldron.next_room = rm_cauldron;

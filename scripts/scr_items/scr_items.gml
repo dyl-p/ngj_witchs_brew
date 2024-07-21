@@ -94,6 +94,7 @@ function item () constructor {
 	sprite = noone;		//sprite of item
 	qty = 1;			//quantity of item
 	inv_loc = -1;
+	type = "item";		//used to identify between different types of things in the inventory
 }
 
 function item_half_coffee (): item () constructor {

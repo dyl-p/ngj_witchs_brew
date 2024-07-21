@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_inventory_display",
+  "%Name":"obj_inventory_cauldron",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_inventory_display",
+  "name":"obj_inventory_cauldron",
   "overriddenProperties":[],
   "parent":{
     "name":"ui",
