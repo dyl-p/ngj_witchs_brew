@@ -17,6 +17,7 @@ for (var _i = 0; _i < (max_col * max_row); _i++) {
 	var _y = y + (offset * _col);		//set base y
 	
 	var _inst = instance_create_depth(_x, _y, 0, obj_inventory_slot);
+	_inst.list = obj_game.inventory;
 	_inst.position = _i;
 }
 

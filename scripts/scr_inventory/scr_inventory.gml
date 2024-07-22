@@ -10,7 +10,7 @@ function potion_recipe(_ing_1, _ing_2, _ing_3 = noone){
 }
 
 //add an item to the inventory
-function item_add_inventory(_name, _list){
+function item_add_inventory(_list, _name){
 	
 	//check to see if the item already exists
 	var _item_added = false;

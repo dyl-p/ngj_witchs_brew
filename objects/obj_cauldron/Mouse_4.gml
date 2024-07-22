@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+/*
 if brew_check_potion() {
 	
 	//add the potion to the users inventory
@@ -12,3 +13,4 @@ if brew_check_potion() {
 	instance_destroy(obj_inventory_item)
 	obj_inventory_display.inventory_create_items();
 }
+*/

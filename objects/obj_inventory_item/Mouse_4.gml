@@ -12,26 +12,21 @@ if selected {
 	
 	//if there is a slot, center to where the item should be
 	if _inst_slot {
+		//the item is no longer selected
+		selected = false;
+		
+		//move the item to the centre of the slot
 		x = _inst_slot.x;
 		y = _inst_slot.y;
-		selected = false;	
-	
+		
 		//put the item into the new place in the inventory array
 		
 		//if the thing is an item
-		if type == "item" {
-			//if the slot is in the inventory
-			if _inst_slot.position != -1 {
-				ds_list_replace(obj_game.inventory, _inst_slot.position, item_get_struct(nm));
-			}
-		//if the thing is a potion
-		} else if type == "potion" {
-			ds_list_replace(obj_game.inventory, _inst_slot.position, potion_get_struct(nm));
-		}
+		ds_list_replace(_inst_slot.list, _inst_slot.position, item_get_struct(name));
 		
 		//if the slot is in the inventory
 		if _inst_slot.position != -1 {
-			obj_game.inventory[|_inst_slot.position].qty = qty;
+			_inst_slot.list[|_inst_slot.position].qty = qty;
 		}
 	}
 	
@@ -44,9 +39,9 @@ if selected {
 	//if we didn't just replace this object with a different one, empty the space in inventory
 	if _inst_slot.position != -1 {
 		//check to see if the item in inventory is the same as we just picked up
-		if obj_game.inventory[|_inst_slot.position].nm == nm {
+		if _inst_slot.list[|_inst_slot.position].name == name {
 				//set the item in the list to -1 (no item)
-				ds_list_replace(obj_game.inventory, _inst_slot.position, -1);
+				ds_list_replace(_inst_slot.list, _inst_slot.position, -1);
 		}
 	}
 	

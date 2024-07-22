@@ -5,7 +5,7 @@
 //}
 
 if keyboard_check_pressed(ord("E")){
-	item_add_inventory(item_name);
+	item_add_inventory(obj_game.inventory, item_name);
 }else{
 	obj_pickup_hint.is_show_requested = true;	
 }
