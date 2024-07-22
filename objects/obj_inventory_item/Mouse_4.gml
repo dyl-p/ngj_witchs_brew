@@ -36,22 +36,6 @@ if selected {
 	}
 	
 #endregion
-
-//#region check to see if we're placing on the cauldron
-
-//	var _cauldron = instance_position(mouse_x, mouse_y, obj_cauldron);
-	
-//	if _cauldron && !_cauldron.brew_item_exists(nm){
-//		ds_list_add(_cauldron.brew,item_get_struct(nm));
-//		qty -= 1;
-		
-//		if qty == 0 {
-//			instance_destroy();	
-//		}
-//	}
-	
-
-//#endregion
 	
 } else {
 	
@@ -59,7 +43,9 @@ if selected {
 	
 	//if we didn't just replace this object with a different one, empty the space in inventory
 	if _inst_slot.position != -1 {
+		//check to see if the item in inventory is the same as we just picked up
 		if obj_game.inventory[|_inst_slot.position].nm == nm {
+				//set the item in the list to -1 (no item)
 				ds_list_replace(obj_game.inventory, _inst_slot.position, -1);
 		}
 	}

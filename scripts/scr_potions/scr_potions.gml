@@ -74,7 +74,7 @@ function potion_antidepressant (): potion () constructor {
 	nm="Antidepressant";
 	ingredients = ["ash", "waterbottle", "bacon"];
 	value = 99;
-	spr = spr_potion_antidepressent_icon;
+	spr = spr_potion_antidepressant_icon;
 }
 
 function potion_hangovercure (): potion () constructor {
@@ -109,6 +109,40 @@ function get_potions_all(){
 
 function potion_get_struct(_name){
 	switch (_name) {
+	    case "half_coffee":
+	        return new ItemHalfCoffee();
+		case "owl_feather":
+			return new ItemOwlFeather();
+	    case "cattail":
+	        return new ItemCattail();
+		case "glass_milk":
+			return new ItemGlassMilk();
+	    case "hairball":
+	        return new ItemHairball();
+		case "ash":
+			return new ItemAsh();
+		case "bacon":
+			return new ItemBacon();
+		case "bandaid":
+			return new ItemBandaid();
+		case "eyeofnewt":
+			return new ItemEyeOfNewt();
+		case "pictureoftoad":
+			return new ItemPictureOfToad();
+		case "syringe":
+			return new ItemSyringe();
+		case "waterbottle":
+			return new ItemWaterbottle();
+		case "wine":
+			return new ItemWine();
+		case "heartstone":
+			return new ItemHeartstone();
+		case "gum":
+			return new ItemGum();
+		case "rose":
+			return new ItemRose();
+		case "banana":
+			return new ItemBanana();
 	    case "Speedwalking":
 	        return new potion_speedwalk();
 		case "Instant Rizz":

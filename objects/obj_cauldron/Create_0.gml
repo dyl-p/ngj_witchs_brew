@@ -7,8 +7,10 @@ brew_index = 1;
 image_index = brew_index;
 
 for (var _i = 0; _i < 3; _i++){
+	//create the slots and set their position
 	var _inst = instance_create_layer(x - 120 + (_i * 120), y - 60, "Instances",obj_inventory_slot);
-	
+	_inst.position = _i;
+	ds_list_add(brew,-1);
 }
 
 #region functions
