@@ -21,10 +21,10 @@ function item_add_inventory(_list, _name){
 		if _list[|_i] != -1 {
 			if _list[| _i].name	== _name {
 				//check to see if we've reached the max stack size
-
-				_list[| _i].qty += 1;
-			
-				_item_added = true;
+				if _list[|_i].qty < _list[|_i].max_qty {
+					_list[| _i].qty += 1;
+					_item_added = true;
+				}
 			}
 		}
 	}
@@ -113,6 +113,7 @@ function Item () constructor {
 	loc = -1;
 	type = "item";		//used to identify between different types of things in the inventory
 	val = 0;
+	max_qty = 20;
 }
 
 function ItemHalfCoffee (): Item () constructor {

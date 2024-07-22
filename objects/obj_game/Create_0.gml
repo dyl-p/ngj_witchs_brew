@@ -10,6 +10,7 @@ randomize();
 
 max_inv_col = 9;
 max_inv_row = 5;
+max_inv_stack = 20;
 
 //save room in case we use different levels
 my_room = room;

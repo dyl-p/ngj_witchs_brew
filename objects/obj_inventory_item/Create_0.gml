@@ -20,7 +20,21 @@ function Item () constructor {
 }
 */
 
+//what this item should look like
 sprite_index = spr;
 
 //if this item was selected
 selected = false;
+
+pickup_item = function(_slot, _qty = -1) {
+	//if we didn't just replace this object with a different one, empty the space in inventory
+	if _slot.position != -1{
+		//check to see if the item in inventory is the same as we just picked up
+		if _slot.list[|_slot.position].name == name {
+			//set the item in the list to -1 (no item)
+			if _qty == -1 {
+				ds_list_replace(_slot.list, _slot.position, -1);
+			}
+		}
+	}
+}
