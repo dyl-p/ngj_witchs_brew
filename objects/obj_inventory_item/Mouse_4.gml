@@ -15,21 +15,12 @@ if selected {
 		//the item is no longer selected
 		selected = false;
 		
-		//move the item to the centre of the slot
-		x = _inst_slot.x;
-		y = _inst_slot.y;
-		
-		//put the item into the new place in the inventory array
-		ds_list_replace(_inst_slot.list, _inst_slot.position, item_get_struct(name));
-		
-		//if the slot is in the inventory
-		if _inst_slot.position != -1 {
-			_inst_slot.list[|_inst_slot.position].qty = qty;
-		}
+		drop_item(_inst_slot);
 	}
 	
 #endregion
-	
+
+#region check to see if we're picking up an item
 } else {
 	
 	var _inst_slot = instance_place(x, y, obj_inventory_slot);
@@ -38,3 +29,4 @@ if selected {
 	
 	selected = true;
 }
+#endregion

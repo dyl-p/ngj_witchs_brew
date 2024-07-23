@@ -24,6 +24,7 @@ function item_add_inventory(_list, _name){
 				if _list[|_i].qty < _list[|_i].max_qty {
 					_list[| _i].qty += 1;
 					_item_added = true;
+					break;
 				}
 			}
 		}

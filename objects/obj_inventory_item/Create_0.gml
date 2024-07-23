@@ -38,3 +38,50 @@ pickup_item = function(_slot, _qty = -1) {
 		}
 	}
 }
+
+drop_item = function(_slot, _qty = -1) {
+	
+	if _qty == -1 {
+		_qty = qty;
+	}	
+
+	//check to see if there is an item in the space already
+	var _item_other = instance_place(x, y, obj_inventory_item)
+	
+	//add the item quantities together if they're the same item type
+	if _item_other != noone && _item_other.name ==  name{
+		_qty += _item_other.qty;
+	}
+		
+	//move the item to the centre of the slot
+	x = _slot.x;
+	y = _slot.y;
+		
+	//if we're just placing the item into a new slot
+	ds_list_replace(_slot.list, _slot.position, item_get_struct(name));
+	
+	//create the item in the obj_game inventory
+	_slot.list[|_slot.position].qty = _qty;
+		
+	//decrease our own quantity
+	qty -= _qty;
+	
+	//destroy the item if there are no more!
+	if qty <= 0 {
+		instance_destroy();	
+	}
+		
+	//recreate inventory items
+	
+	//first destroy all non held inventory items
+	with (obj_inventory_item) {
+		if !selected {
+			instance_destroy();	
+		}
+	}
+		
+	//regenerate inventory items
+	obj_inventory_display.inventory_create_items();
+
+
+}

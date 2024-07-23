@@ -21,7 +21,7 @@ for (var _i = 0; _i < (max_col * max_row); _i++) {
 	_inst.position = _i;
 }
 
-function inventory_create_items(){
+inventory_create_items = function(){
 
 	//create the inventory items and place them per the inventory
 	for (var _i = 0; _i < ds_list_size(obj_game.inventory); _i++) {
