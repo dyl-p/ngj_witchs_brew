@@ -1,30 +1,51 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-/*
-It is assumed that a struct with the sprite
-and description of the item is used in this
-item's create event which creates a number of other variables
+#region object variables
 
-Name the following:
-//the basic pieces of data required to define an inventory item
-function Item () constructor {
-	name = "";			//name of item
-	desc = "";			//description of item
-	spr = noone;		//sprite of item
-	qty = 1;			//quantity of item
-	loc = -1;
-	type = "item";		//used to identify between different 
-						//types of things in the inventory
-	val = 0;			//monetary value of the item
+items = ds_list_create();
+
+#endregion
+
+#region functions
+
+//new function for controller to place items
+place_items = function(_slot, _item_sel, _item_n_sel = noone, _qty = -1){
+	
+	//if no quantity is provided then set the qty to the items quantity
+	if _qty == -1 {
+		_qty = _item_sel.qty;
+	}
+	
+	//add the item quantities together if they're the same item type
+	if _item_n_sel != noone && _item_other.name ==  name{
+		_item_n_sel.qty += _qty;
+	}
+	
+	/*
+	//move the item to the centre of the slot
+	x = _slot.x;
+	y = _slot.y;
+	*/
+	
+	/*
+	//if we're just placing the item into a new slot
+	ds_list_replace(_slot.list, _slot.position, item_get_struct(name));
+	
+	//create the item in the obj_game inventory
+	_slot.list[|_slot.position].qty = _qty;
+	*/
+	
+	//decrease our own quantity
+	_item_sel.qty -= _qty;
+	
+	//destroy the item if there are no more!
+	if _item_sel.qty <= 0 {
+		instance_destroy(_item_sel);	
+	}
+		
+	//recreate inventory items//
 }
-*/
-
-//what this item should look like
-sprite_index = spr;
-
-//if this item was selected
-selected = false;
 
 pickup_item = function(_slot, _qty = -1) {
 	//if we didn't just replace this object with a different one, empty the space in inventory
@@ -40,7 +61,6 @@ pickup_item = function(_slot, _qty = -1) {
 	}
 }
 
-/* place the item in the inventory */
 drop_item = function(_slot, _qty = -1) {
 	
 	//if no quantity is provided then set the qty to the items quantity
@@ -94,3 +114,5 @@ drop_item = function(_slot, _qty = -1) {
 		instance_destroy();	
 	}
 }
+
+#endregion
