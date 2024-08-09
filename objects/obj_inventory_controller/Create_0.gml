@@ -17,16 +17,21 @@ place_items = function(_slot, _item_sel, _item_n_sel = noone, _qty = -1){
 		_qty = _item_sel.qty;
 	}
 	
+	show_debug_message(_item_sel.name);
+	
 	//add the item quantities together if they're the same item type
-	if _item_n_sel != noone && _item_other.name ==  name{
-		_item_n_sel.qty += _qty;
+	if _item_n_sel != noone {
+		if (_item_sel.name ==  _item_n_sel.name){
+			_item_n_sel.qty += _qty;
+		}
+	}
+
+	//if there isn't an item where we're placing this
+	if _item_n_sel == noone {
+		var _item_n = instance_create_layer(_slot.x, _slot.y,"Instances",obj_inventory_item,item_get_struct(_item_sel.name));
+		_item_n.qty = _qty;
 	}
 	
-	/*
-	//move the item to the centre of the slot
-	x = _slot.x;
-	y = _slot.y;
-	*/
 	
 	/*
 	//if we're just placing the item into a new slot
