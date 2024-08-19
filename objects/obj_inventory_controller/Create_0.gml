@@ -23,13 +23,15 @@ place_items = function(_slot, _item_sel, _item_n_sel = noone, _qty = -1){
 	if _item_n_sel != noone {
 		if (_item_sel.name ==  _item_n_sel.name){
 			_item_n_sel.qty += _qty;
+			_item_sel.qty -= _qty;
 		}
 	}
 
 	//if there isn't an item where we're placing this
 	if _item_n_sel == noone {
-		var _item_n = instance_create_layer(_slot.x, _slot.y,"Instances",obj_inventory_item,item_get_struct(_item_sel.name));
-		_item_n.qty = _qty;
+		var _item_new = instance_create_layer(_slot.x, _slot.y,"Instances",obj_inventory_item,item_get_struct(_item_sel.name));
+		_item_new.qty = _qty;
+		_item_sel.qty -= _qty;
 	}
 	
 	
@@ -42,7 +44,8 @@ place_items = function(_slot, _item_sel, _item_n_sel = noone, _qty = -1){
 	*/
 	
 	//decrease our own quantity
-	_item_sel.qty -= _qty;
+	
+	//_item_sel.qty -= _qty;
 	
 	//destroy the item if there are no more!
 	if _item_sel.qty <= 0 {
@@ -51,7 +54,7 @@ place_items = function(_slot, _item_sel, _item_n_sel = noone, _qty = -1){
 		
 	//recreate inventory items//
 }
-
+/*
 pickup_item = function(_slot, _qty = -1) {
 	//if we didn't just replace this object with a different one, empty the space in inventory
 	if _slot.position != -1{
@@ -119,5 +122,5 @@ drop_item = function(_slot, _qty = -1) {
 		instance_destroy();	
 	}
 }
-
+*/
 #endregion
