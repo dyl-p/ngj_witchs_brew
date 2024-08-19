@@ -51,7 +51,7 @@ if _item_n_sel.name != _item_sel.name {
 	} else if _item_sel == noone {
 		_item_n_sel.selected = true;
 		
-		ds_list_replace(obj_game.inventory, _slot.position,-1);
+		ds_list_replace(_slot.list, _slot.position,-1);
 	}
 }
 
