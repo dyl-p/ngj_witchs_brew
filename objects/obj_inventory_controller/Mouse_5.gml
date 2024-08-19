@@ -20,7 +20,10 @@ for (var _i = 0; _i < _items_len; _i++){
 	}	
 }
 
-place_items(_slot,_item_sel,_item_n_sel,1);
+//make sure we're actually trying to interact with something
+if _items_len > 0 && _slot != noone && _item_sel != noone{
+	place_items(_slot,_item_sel,_item_n_sel,1);
+}
 
 
 ds_list_clear(items);

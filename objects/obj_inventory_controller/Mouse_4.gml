@@ -31,7 +31,8 @@ if _items_len == 2 {
 //if we're trying to place this item on top of a different item swap the two items
 if _item_n_sel.name != _item_sel.name {
 	_item_n_sel.selected = true;
-	_item_sel.selected = false;
+	place_items(_slot, _item_sel);
+	
 } else if _item_n_sel.name == _item_sel.name {
 	place_items( _slot,_item_sel, _item_n_sel);
 }
@@ -40,17 +41,17 @@ if _item_n_sel.name != _item_sel.name {
 //if we're placing this item on top of a like item add the amount of the held item to the unheld item
 	//if we place more than the items max then ensure you continue to hold that much item
 
-} else if _items_len == 1 {
+} else if _items_len == 1 && _slot != noone{
 
 	// if there is only one item then pickup or drop off the selected item
-	if _item_n_sel == noone {
-		_item_sel.selected = false;	
+	if _item_n_sel == noone {	
 		
-		//move the item to the centre of the slot
-		_item_sel.x = _slot.x;
-		_item_sel.y = _slot.y;
+		place_items(_slot,_item_sel);
+		
 	} else if _item_sel == noone {
-		_item_n_sel.selected = true;	
+		_item_n_sel.selected = true;
+		
+		ds_list_replace(obj_game.inventory, _slot.position,-1);
 	}
 }
 

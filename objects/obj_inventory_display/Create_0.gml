@@ -1,9 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//x = 120;
-//y = 120;
-
 max_col = obj_game.max_inv_col;
 max_row = obj_game.max_inv_row;
 offset = 92;

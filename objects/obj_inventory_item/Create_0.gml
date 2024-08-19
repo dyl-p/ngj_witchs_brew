@@ -26,6 +26,7 @@ sprite_index = spr;
 //if this item was selected
 selected = false;
 
+/*
 pickup_item = function(_slot, _qty = -1) {
 	//if we didn't just replace this object with a different one, empty the space in inventory
 	if _slot.position != -1{
@@ -39,8 +40,10 @@ pickup_item = function(_slot, _qty = -1) {
 		}
 	}
 }
-
+*/
 /* place the item in the inventory */
+
+/*
 drop_item = function(_slot, _qty = -1) {
 	
 	//if no quantity is provided then set the qty to the items quantity
@@ -93,4 +96,7 @@ drop_item = function(_slot, _qty = -1) {
 	if qty <= 0 {
 		instance_destroy();	
 	}
+	
+	inventory_recreate();
 }
+*/
