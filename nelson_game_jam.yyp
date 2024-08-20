@@ -49,6 +49,7 @@
     {"id":{"name":"fnt_menu_small","path":"fonts/fnt_menu_small/fnt_menu_small.yy",},},
     {"id":{"name":"obj_button_deliver","path":"objects/obj_button_deliver/obj_button_deliver.yy",},},
     {"id":{"name":"obj_button_menu_map","path":"objects/obj_button_menu_map/obj_button_menu_map.yy",},},
+    {"id":{"name":"obj_button_menu_mix","path":"objects/obj_button_menu_mix/obj_button_menu_mix.yy",},},
     {"id":{"name":"obj_button_menu_money","path":"objects/obj_button_menu_money/obj_button_menu_money.yy",},},
     {"id":{"name":"obj_button_menu_potiondash","path":"objects/obj_button_menu_potiondash/obj_button_menu_potiondash.yy",},},
     {"id":{"name":"obj_button_menu_summon","path":"objects/obj_button_menu_summon/obj_button_menu_summon.yy",},},

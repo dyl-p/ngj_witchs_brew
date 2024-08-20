@@ -4,8 +4,47 @@ function scr_inventory(){
 
 }
 
+///@function					potion_check_recipe(_ing_1, _ing_2, _ing_3)
+///@param {array} _ingredients		First Ingredient
+
 //returns the item that would be created by a given list of ingredients
-function potion_recipe(_ing_1, _ing_2, _ing_3 = noone){
+function potion_check_recipe(_ingredients){
+	
+	//create a list of all the potion options so we can see if any are made
+	var _potions = ["speedwalking", "instant_rizz", "talk_to_cats", "night_owl", "antidepressant", "hangover_cure", "beauty_potion"];
+
+	//check to see if we are making a potion
+	for (var _i = 0; _i < array_length(_potions); _i++){
+		
+		show_debug_message("potions: " + string(_i));
+		
+		var _matches = 0;								//number of ingredients that match a potion
+		var _potion = item_get_struct(_potions[_i]);
+		
+		show_debug_message(_potions[_i]);
+		
+		//check each potion in the potion's ingredients
+		for (var _j = 0; _j < array_length(_potion.ingredients); _j++) {
+			
+			show_debug_message("potions ingredient: " + string(_j));
+			
+			//against each ingredient
+			for (var _k = 0; _k < array_length(_ingredients); _k++){
+				show_debug_message("mix ingredient: " + string(_k));
+				if _potion.ingredients[_j] == _ingredients[_k] {
+					_matches += 1;
+				}
+			}
+		}
+		
+		//if we have a perfect match then we have made a potion!
+		if _matches == array_length(_potion.ingredients){
+			return _potion.name;	
+		}
+	}
+
+	// if we get here we haven't found a potion
+	return -1;
 
 }
 
@@ -24,7 +63,7 @@ function item_add_inventory(_list, _name){
 				if _list[|_i].qty < _list[|_i].max_qty {
 					_list[| _i].qty += 1;
 					_item_added = true;
-					break;
+					return _i;
 				}
 			}
 		}
@@ -38,7 +77,7 @@ function item_add_inventory(_list, _name){
 		for (var _i = 0; _i < ds_list_size(_list); _i++) {
 			if _list[|_i] == -1 {
 				ds_list_replace(_list, _i, item_get_struct(_name));
-				break;
+				return _i;
 			}
 		}
 	}
@@ -92,6 +131,10 @@ function inventory_recreate(){
 
 #region retrive items based on names
 
+/// @function				item_get_struct(_name)
+/// @param1 {string} _name	The name of the item to return
+/// @description			Retrieve the item struct based on it's name
+
 function item_get_struct(_name){
 	switch (_name) {
 	    case "half_coffee":
@@ -140,7 +183,7 @@ function item_get_struct(_name){
 	        return new ItemAntidepressantPotion();
 		case "hangover_cure":
 			return new ItemHangoverCurePotion();
-		case "beauy_potion":
+		case "beauty_potion":
 			return new ItemBeautyFilterPotion();
 	    default:
 	        return noone;

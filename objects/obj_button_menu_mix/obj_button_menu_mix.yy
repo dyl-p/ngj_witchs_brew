@@ -1,19 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_cauldron",
+  "%Name":"obj_button_menu_mix",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_cauldron",
+  "name":"obj_button_menu_mix",
   "overriddenProperties":[],
   "parent":{
     "name":"ui",
     "path":"folders/Objects/ui.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_button_menu",
+    "path":"objects/obj_button_menu/obj_button_menu.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cauldron",
-    "path":"sprites/spr_cauldron/spr_cauldron.yy",
+    "name":"spr_cream_button",
+    "path":"sprites/spr_cream_button/spr_cream_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

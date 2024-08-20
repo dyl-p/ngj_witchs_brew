@@ -195,3 +195,54 @@ function potion_add_inventory(_name){
 		}
 	}
 }
+
+/*
+function ItemSpeedwalkPotion (): Item () constructor {
+	name = "speedwalking"
+	ingredients = ["banana", "glass_milk", "heartstone"];
+	val = 105;
+	spr = spr_potion_speedwalk_icon;
+}
+
+function ItemRizzPotion (): Item () constructor {
+	name = "instant_rizz";
+	ingredients = ["heartstone", "gum", "rose"];
+	val = 105;
+	spr = spr_potion_rizzpotion_icon;
+}
+
+function ItemTalkToCatsPotion (): Item () constructor {
+	name = "talk_to_cats";
+	ingredients = ["glass_milk", "cattail", "hairball"];
+	val = 105;
+	spr = spr_potion_speaktocats_icon;
+}
+
+function ItemNightOwlPotion (): Item () constructor {
+	name = "night_owl";
+	ingredients = ["half_coffee", "owl_feather"];
+	val = 75;
+	spr = spr_potion_nightowl_icon;
+}
+
+function ItemAntidepressantPotion (): Item () constructor {
+	name = "antidepressant";
+	ingredients = ["ash", "waterbottle", "bacon"];
+	val = 99;
+	spr = spr_potion_antidepressant_icon;
+}
+
+function ItemHangoverCurePotion (): Item () constructor {
+	name = "hangover_cure";
+	ingredients = ["waterbottle", "eyeofnewt", "bandaid"];
+	val = 69;
+	spr = spr_potion_antihangover_icon;
+}
+
+function ItemBeautyFilterPotion (): Item () constructor {
+	name = "beauty_potion";
+	ingredients = ["wine", "syringe", "pictureoftoad"];
+	val = 128;
+	spr = spr_potion_beautyfilter_icon;
+}
+*/
