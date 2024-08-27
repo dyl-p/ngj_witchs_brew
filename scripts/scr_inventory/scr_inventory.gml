@@ -23,6 +23,7 @@ function potion_check_recipe(_ingredients){
 		
 		show_debug_message(_potions[_i]);
 		
+		
 		//check each potion in the potion's ingredients
 		for (var _j = 0; _j < array_length(_potion.ingredients); _j++) {
 			
@@ -32,12 +33,20 @@ function potion_check_recipe(_ingredients){
 			for (var _k = 0; _k < array_length(_ingredients); _k++){
 				show_debug_message("mix ingredient: " + string(_k));
 				if _potion.ingredients[_j] == _ingredients[_k] {
-					_matches += 1;
+					_potion.ingredients[_j] = "found";
 				}
 			}
+			//
 		}
 		
 		//if we have a perfect match then we have made a potion!
+		
+		for ( var _j = 0; _j < array_length(_potion.ingredients); _j++){
+			if _potion.ingredients[_j] == "found"{
+				_matches += 1;	
+			}
+		}
+		show_debug_message("matches: " + string(_matches));
 		if _matches == array_length(_potion.ingredients){
 			return _potion.name;	
 		}
@@ -46,6 +55,27 @@ function potion_check_recipe(_ingredients){
 	// if we get here we haven't found a potion
 	return -1;
 
+}
+
+///@function						item_return_inventory(_ing_1, _ing_2, _ing_3)
+///@param {id.DsList} _list			List of items to return
+///@param {id.DsList} _list_return	List to return the items to
+
+function item_return_inventory (_list, _list_return){
+	
+	//for each item in the list
+	for (var _i = 0; _i < ds_list_size(_list); _i++){
+		show_debug_message(_i);
+		
+		//if there is an item at this spot in the list
+		if _list[|_i] != -1 {
+		
+			var _place = item_add_inventory(_list_return, _list[|_i].name);
+			_list_return[|_place].qty += _list[|_i].qty - 1;
+			
+			_list[|_i] = -1;
+		}
+	}
 }
 
 //add an item to the inventory
