@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+obj_mix_minigame.fire_up_the_cauldron();
+
 //check to see if the items in the brew match any potion
 with obj_cauldron {
 	

@@ -1,0 +1,22 @@
+{
+  "$GMPath":"",
+  "%Name":"pth_cauldron",
+  "closed":true,
+  "kind":1,
+  "name":"pth_cauldron",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":1098.0,"y":230.0,},
+    {"speed":100.0,"x":1127.8345,"y":204.16354,},
+    {"speed":100.0,"x":1188.0,"y":194.0,},
+    {"speed":100.0,"x":1254.9521,"y":199.42825,},
+    {"speed":100.0,"x":1303.0,"y":226.0,},
+    {"speed":100.0,"x":1189.0,"y":238.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}
