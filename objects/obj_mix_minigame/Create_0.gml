@@ -29,9 +29,10 @@ fire_up_the_cauldron = function() {
 	//create the spoon
 	spoon = instance_create_layer(x, y, "Instances", obj_mix_spoon);
 	spoon.depth = -200;
+	spoon.cauldron = id;
 	
 	with spoon {
-		path_start(pth_cauldron, 1.5, path_action_continue,true);
+		path_start(pth_cauldron, 0, path_action_continue,true);
 	}
 	
 	//set the cauldron to active

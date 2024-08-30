@@ -5,6 +5,12 @@
 
 angle_start = 15;
 angle_apex = -1 * angle_start;
+cauldron = noone;
+
+spd_current = 0;
+spd_max = 2;
+spd_accel = 0.04;
+spd_fric = 0.92;
 
 
 stir_setup = function(){
