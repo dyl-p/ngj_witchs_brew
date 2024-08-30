@@ -8,10 +8,15 @@ angle_apex = -1 * angle_start;
 cauldron = noone;
 
 spd_current = 0;
-spd_max = 2;
+spd_max = 3;
 spd_accel = 0.04;
 spd_fric = 0.92;
 
+
+boil_range_min = 420;
+boil_range_max = 540;
+boil_threshold = irandom_range(boil_range_min, boil_range_max);
+boil_current = 0;
 
 stir_setup = function(){
 	angle_min = angle_start;

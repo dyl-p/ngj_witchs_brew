@@ -2,24 +2,26 @@
 // You can write your code in this editor
 
 //Get Input
-
 var _input_left =  keyboard_check(ord("A"));
 var _input_right = keyboard_check(ord("D"));
 var _input_up = keyboard_check(ord("W"));
 var _input_down = keyboard_check(ord("S"));
 
+var _input_ing = keyboard_check_pressed(vk_space);
+
+//determine angle of sprite
 if path_position < 0.5 {
 	image_angle = angle_min + (angle_apex * 2 * (path_position * 2));
 } else {
 	image_angle = angle_apex + (angle_min * 2 * ((path_position mod 0.5)* 2));	
 }
 
+//setup for moving the spoon
 var _input = false;
-
-show_debug_message(path_position);
 
 var _pos = path_position;
 
+//figure out if the input is appropriate for where in the pot we're stirring
 if _pos >= 0.9 || (0 <= _pos && _pos < 0.1) && _input_up{
 	_input = true;
 } else if 0.05 < _pos && _pos <= 0.45  && _input_right{
@@ -30,25 +32,38 @@ if _pos >= 0.9 || (0 <= _pos && _pos < 0.1) && _input_up{
 	_input = true;
 }
 
+//if we are pressing the right input increase speed of stirring
 if _input {
 	if spd_current <= 0.1 { spd_current = 0.5 };
 	spd_current *= 1 + spd_accel;
-	//show_debug_message("Oh yeah, got some input baby");
+//if we aren't pressing the right input slow down
 } else {
 	spd_current *= spd_fric;
-	//show_debug_message("Slowing Down");
 }
 
+//cap speed of spoon
 if spd_current >= spd_max {
 	spd_current = spd_max;
-	//show_debug_message("Max speed bb");
 }
 
+//don't let the speed become negative
 if spd_current <= 0 {
 	spd_current = 0;	
-	//show_debug_message("Reset spoon speed to 0");
 }
 
-//show_debug_message(spd_current);
-
+//set speed
 path_speed = spd_current;
+
+/*change colour of sprite based on how boiling the brew is*/
+
+if spd_current >= 1 {
+	boil_current += 0.5;
+} else {
+	boil_current += 1;
+}
+
+
+
+if _input_ing {
+	boil_current = 0;	
+}
