@@ -1,0 +1,5 @@
+TODO:
+Minigame
+[ ] allow ingredients to get added one at a time
+	-- keep the potion cooking for as long as possible without burning it
+	-- stirring the potion increases the amount of time you cook the potion

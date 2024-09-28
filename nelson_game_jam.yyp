@@ -42,12 +42,13 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"nelson_game_jam",
   "resources":[
     {"id":{"name":"fnt_button","path":"fonts/fnt_button/fnt_button.yy",},},
     {"id":{"name":"fnt_menu_small","path":"fonts/fnt_menu_small/fnt_menu_small.yy",},},
+    {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
     {"id":{"name":"obj_button_deliver","path":"objects/obj_button_deliver/obj_button_deliver.yy",},},
     {"id":{"name":"obj_button_menu_map","path":"objects/obj_button_menu_map/obj_button_menu_map.yy",},},
     {"id":{"name":"obj_button_menu_mix","path":"objects/obj_button_menu_mix/obj_button_menu_mix.yy",},},
