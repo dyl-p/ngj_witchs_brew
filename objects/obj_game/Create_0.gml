@@ -54,6 +54,13 @@ for (var _i = 0; _i < (max_inv_col * max_inv_row); _i ++) {
 //list orders taken
 orders = ds_list_create();
 
+//setup inventory for testing
+
+for (var _i = 0; _i < 20; _i ++ ){
+	item_add_inventory(inventory, "banana");
+	item_add_inventory(inventory, "glass_milk");
+	item_add_inventory(inventory, "heartstone");
+}
 
 
 //send first two orders

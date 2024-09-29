@@ -25,5 +25,18 @@ if _items_len > 0 && _slot != noone && _item_sel != noone{
 	place_items(_slot,_item_sel,_item_n_sel,1);
 }
 
+//if we're just right clicking an object that isn't selected
+if _items_len > 0 && _item_n_sel != noone && _item_sel == noone {
+	
+	//TODO finish this thang
+	
+	var _mix_slot = []
+	
+	if instance_exists(obj_cauldron){
+		show_debug_message("I got righ-clicked <3");	
+	}
+	
+}
+
 
 ds_list_clear(items);

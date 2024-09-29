@@ -6,6 +6,7 @@
 angle_start = 15;
 angle_apex = -1 * angle_start;
 cauldron = noone;
+dir_rot = 90;
 
 spd_current = 0;
 spd_max = 3;

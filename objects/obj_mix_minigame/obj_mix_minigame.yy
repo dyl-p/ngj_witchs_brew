@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mix_minigame",
-    "path":"sprites/spr_mix_minigame/spr_mix_minigame.yy",
+    "name":"spr_mix_minigame_1",
+    "path":"sprites/spr_mix_minigame_1/spr_mix_minigame_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -22,14 +22,34 @@ var _input = false;
 var _pos = path_position;
 
 //figure out if the input is appropriate for where in the pot we're stirring
+
+
 if _pos >= 0.9 || (0 <= _pos && _pos < 0.1) && _input_up{
 	_input = true;
-} else if 0.05 < _pos && _pos <= 0.45  && _input_right{
-	_input = true;
-} else if 0.4 < _pos && _pos <= 0.6  && _input_down{
-	_input = true;
+
 } else if 0.55 < _pos && _pos < 0.95  && _input_left{
 	_input = true;
+
+} else if 0.4 < _pos && _pos <= 0.6  && _input_down{
+	_input = true;
+
+} else if 0.05 < _pos && _pos <= 0.45  && _input_right{
+	_input = true;
+
+}
+
+if _pos >= 0.9 || (0 <= _pos && _pos < 0.05){
+
+	dir_rot = 90;
+} else if 0.55 <= _pos && _pos < 0.9{
+
+	dir_rot = 180;
+} else if 0.4 < _pos && _pos <= 0.55{
+
+	dir_rot = 270;
+} else if 0.05 < _pos && _pos <= 0.4{
+
+	dir_rot = 0;
 }
 
 //if we are pressing the right input increase speed of stirring
@@ -57,7 +77,7 @@ path_speed = spd_current;
 /*change colour of sprite based on how boiling the brew is*/
 
 if spd_current >= 1 {
-	boil_current += 0.5;
+	boil_current += (0.2 + (1 - (spd_current / spd_max)));
 } else {
 	boil_current += 1;
 }
